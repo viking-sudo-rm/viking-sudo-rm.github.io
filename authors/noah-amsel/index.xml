@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Noah Amsel on Will Merrill</title>
+    <link>http://lambdaviking.com/authors/noah-amsel/</link>
+    <description>Recent content in Noah Amsel on Will Merrill</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 01 Aug 2019 00:00:00 +0000</lastBuildDate>
+    
+	    <atom:link href="http://lambdaviking.com/authors/noah-amsel/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Finding Syntactic Representations in Neural Stacks</title>
+      <link>http://lambdaviking.com/publication/finding-syntactic-representations-in-neural-stacks/</link>
+      <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://lambdaviking.com/publication/finding-syntactic-representations-in-neural-stacks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Context-Free Transductions with Neural Stacks</title>
+      <link>http://lambdaviking.com/publication/context-free-transductions-with-neural-stacks/</link>
+      <pubDate>Tue, 30 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://lambdaviking.com/publication/context-free-transductions-with-neural-stacks/</guid>
+      <description>&lt;!-- Supplementary notes can be added here, including [code and math](https://sourcethemes.com/academic/docs/writing-markdown-latex/).
+ --&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

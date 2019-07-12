@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Authors on Will Merrill</title>
+    <link>http://lambdaviking.com/authors/</link>
+    <description>Recent content in Authors on Will Merrill</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 02 Aug 2019 00:02:00 +0000</lastBuildDate>
+    
+	    <atom:link href="http://lambdaviking.com/authors/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>http://lambdaviking.com/authors/admin/</link>
+      <pubDate>Fri, 02 Aug 2019 00:02:00 +0000</pubDate>
+      
+      <guid>http://lambdaviking.com/authors/admin/</guid>
+      <description>&lt;p&gt;I am an incoming research resident on the &lt;a href=&#34;https://allennlp.org/&#34;&gt;AllenNLP&lt;/a&gt; team at &lt;a href=&#34;https://allenai.org/&#34;&gt;AI2&lt;/a&gt;. I recently graduated from Yale, where my &lt;a href=&#34;http://lambdaviking.com/publication/sequential-neural-networks-as-automata/&#34;&gt;thesis&lt;/a&gt; was advised by &lt;a href=&#34;https://bobfrank1.github.io/&#34;&gt;Bob Frank&lt;/a&gt; and &lt;a href=&#34;https://cpsc.yale.edu/people/dana-angluin&#34;&gt;Dana Angluin&lt;/a&gt;.
+&lt;/p&gt;
+
+&lt;p&gt;My research interests lie at the intersection of language and computation. In particular, my recent work has developed theory to understand NLP deep learning models. I am also interested in the practical potential of NLP for medical discoveries, studying language change, and many other applications.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Gigi Felice Stark</title>
+      <link>http://lambdaviking.com/authors/gigi-felice-stark/</link>
+      <pubDate>Fri, 02 Aug 2019 00:02:00 +0000</pubDate>
+      
+      <guid>http://lambdaviking.com/authors/gigi-felice-stark/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Robert Frank</title>
+      <link>http://lambdaviking.com/authors/robert-frank/</link>
+      <pubDate>Fri, 02 Aug 2019 00:02:00 +0000</pubDate>
+      
+      <guid>http://lambdaviking.com/authors/robert-frank/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Lenny Khazan</title>
+      <link>http://lambdaviking.com/authors/lenny-khazan/</link>
+      <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://lambdaviking.com/authors/lenny-khazan/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Noah Amsel</title>
+      <link>http://lambdaviking.com/authors/noah-amsel/</link>
+      <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://lambdaviking.com/authors/noah-amsel/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Simon Mendelsohn</title>
+      <link>http://lambdaviking.com/authors/simon-mendelsohn/</link>
+      <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://lambdaviking.com/authors/simon-mendelsohn/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Yiding Hao</title>
+      <link>http://lambdaviking.com/authors/yiding-hao/</link>
+      <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://lambdaviking.com/authors/yiding-hao/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Andrew Benz</title>
+      <link>http://lambdaviking.com/authors/andrew-benz/</link>
+      <pubDate>Tue, 30 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://lambdaviking.com/authors/andrew-benz/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Dana Angluin</title>
+      <link>http://lambdaviking.com/authors/dana-angluin/</link>
+      <pubDate>Tue, 30 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://lambdaviking.com/authors/dana-angluin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Jungo Kasai</title>
+      <link>http://lambdaviking.com/authors/jungo-kasai/</link>
+      <pubDate>Wed, 06 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://lambdaviking.com/authors/jungo-kasai/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Owen Rambow</title>
+      <link>http://lambdaviking.com/authors/owen-rambow/</link>
+      <pubDate>Wed, 06 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://lambdaviking.com/authors/owen-rambow/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Pauli Xu</title>
+      <link>http://lambdaviking.com/authors/pauli-xu/</link>
+      <pubDate>Wed, 06 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://lambdaviking.com/authors/pauli-xu/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
