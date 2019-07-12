@@ -131,16 +131,6 @@
   </url>
   
   <url>
-    <loc>http://lambdaviking.com/post/jupyter/</loc>
-    <lastmod>2019-02-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://lambdaviking.com/post/</loc>
-    <lastmod>2019-04-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://lambdaviking.com/slides/</loc>
     <lastmod>2019-02-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -149,6 +139,28 @@
   <url>
     <loc>http://lambdaviking.com/slides/example/</loc>
     <lastmod>2019-02-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://lambdaviking.com/post/capsule-networks-for-nlp/</loc>
+    <lastmod>2018-11-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://lambdaviking.com/categories/</loc>
+    <lastmod>2018-11-29T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://lambdaviking.com/categories/nlp/</loc>
+    <lastmod>2018-11-29T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://lambdaviking.com/post/</loc>
+    <lastmod>2018-11-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -165,6 +177,45 @@
   <url>
     <loc>http://lambdaviking.com/authors/dana-angluin/</loc>
     <lastmod>2018-10-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://lambdaviking.com/post/learning-to-transduce-with-unbounded-memory/</loc>
+    <lastmod>2018-09-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://lambdaviking.com/tags/voynich/</loc>
+    <lastmod>2018-09-25T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://lambdaviking.com/post/word2vec-analysis-of-the-voynich-manuscript/</loc>
+    <lastmod>2018-09-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://lambdaviking.com/post/after-ragnarok/</loc>
+    <lastmod>2018-07-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://lambdaviking.com/tags/mythology/</loc>
+    <lastmod>2018-07-05T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://lambdaviking.com/categories/old-norse/</loc>
+    <lastmod>2018-07-05T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://lambdaviking.com/categories/translation/</loc>
+    <lastmod>2018-07-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -192,6 +243,11 @@
   </url>
   
   <url>
+    <loc>http://lambdaviking.com/post/saga-of-mary/</loc>
+    <lastmod>2018-01-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://lambdaviking.com/tags/deep-learning/</loc>
     <lastmod>2016-04-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -216,22 +272,6 @@
   <url>
     <loc>http://lambdaviking.com/project/</loc>
     <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://lambdaviking.com/tags/academic/</loc>
-    <lastmod>2019-04-17T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://lambdaviking.com/post/getting-started/</loc>
-    <lastmod>2019-04-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://lambdaviking.com/categories/</loc>
     <priority>0</priority>
   </url>
   
