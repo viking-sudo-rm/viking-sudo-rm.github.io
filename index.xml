@@ -137,7 +137,7 @@
 
 &lt;p&gt;An alternate approach to the same problem is RSA, which is not to be confused with the cryptographic protocol of the same name. RSA sidesteps the issue with probing by measuring the degree to which two representations are correlated, not whether the information from one can be recovered from the other.&lt;/p&gt;
 
-&lt;p&gt;Formally, RSA is a method of computing the similarity between two representations $X$ and $Y$. We assume that we do not have the direct ability to compare $x$ to $y$, but instead have two internally defined similarity measures $d_X(x_1, x_2)$ and $d_Y(y_1, y_2)$. These measures need not be symmetric.&lt;/p&gt;
+&lt;p&gt;Formally, RSA is a method of computing the similarity between two representational spaces $X$ and $Y$. We assume that we do not have the direct ability to compare $x$ to $y$, but instead have two internally defined similarity measures $d_X(x_1, x_2)$ and $d_Y(y_1, y_2)$. For example, one space could be discrete trees, and the other could be neural network hidden states. Additionally, the distance measures need not be symmetric.&lt;/p&gt;
 
 &lt;p&gt;To get an overall measure of similarity, we compute a similar matrices $M(X)$ and $M(Y)$ where&lt;/p&gt;
 
