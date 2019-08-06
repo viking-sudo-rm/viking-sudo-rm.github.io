@@ -564,13 +564,17 @@
 
 <p>To get an overall measure of similarity, we compute a similar matrices $M(X)$ and $M(Y)$ where</p>
 
-<p>[ M(X){ij} = d_X(x_i, x_j) ]</p>
+<p>$$ M(X){ij} = d_X(x_i, x_j) $$</p>
 
 <p>and analogously for $Y$. Once we have these matrices, we compute an overall measure of similarity by taking the correlation between them. I find RSA to be a quite exciting method for future research, as it avoids some of the pitfalls of probing while also being very easy (perhaps easier than probing) to implement. This is not to say that probing should be abandoned completely, as being able to verify the same results with different methods increases their confidence. I recall hearing a talk at ACL in which RSA was already applied to transformer representations and replicated probing findings, although I unfortunately cannot find the paper which reported this.</p>
 
 <h2 id="conclusion">Conclusion</h2>
 
-<p>Probing and RSA are two good methods for understanding what information is encoded in some representation within a trained network. This is still a slightly different question than asking what information is particular relevant for the decision that a network makes given some input, which can be addressed using gradient methods or perturbation studies. I think that interpreting representations and interpreting decisions are both interesting questions. Additionally, both of these questions have analogs in the formal domain, where we can analyze what representations different neural network hidden states can encode, or what classes of formal languages a certain architecture can accept. As others at ACL also mentioned, I would like to see future work connecting empirical interpretability research to the formal analysis that has been done.</p>
+<p>Probing and RSA are two good methods for understanding what information is encoded in some representation within a trained network. This is still a slightly different question than asking what information is particular relevant for the decision that a network makes given some input, which can be addressed using gradient methods or perturbation studies. I think that interpreting representations and interpreting decisions are both interesting questions.</p>
+
+<p>Additionally, both of these questions have analogs in the formal domain, where we can analyze what representations different neural network hidden states can encode, or what classes of formal languages a certain architecture can accept. As others at ACL also mentioned, I would like to see future work connecting empirical interpretability research to the formal analysis that has been done.</p>
+
+<p>Finally, as many people expressed during the conference, I think that a good goal for the next year is progress towards constructive interpretability work. In other words, our interpretation of networks should allow us to make smarter architectures.</p>
 
 <h1 id="delfol">DELFOL</h1>
 
