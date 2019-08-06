@@ -45,7 +45,7 @@
 
 &lt;p&gt;To get an overall measure of similarity, we compute a similar matrices $M(X)$ and $M(Y)$ where&lt;/p&gt;
 
-&lt;p&gt;$$ M(X){ij} = d_X(x_i, x_j) $$&lt;/p&gt;
+&lt;p&gt;$$ M(X)_{ij} = d_X(x_i, x_j) $$&lt;/p&gt;
 
 &lt;p&gt;and analogously for $Y$. Once we have these matrices, we compute an overall measure of similarity by taking the correlation between them. I find RSA to be a quite exciting method for future research, as it avoids some of the pitfalls of probing while also being very easy (perhaps easier than probing) to implement. This is not to say that probing should be abandoned completely, as being able to verify the same results with different methods increases their confidence. I recall hearing a talk at ACL in which RSA was already applied to transformer representations and replicated probing findings, although I unfortunately cannot find the paper which reported this.&lt;/p&gt;
 
@@ -59,7 +59,7 @@
 
 &lt;h1 id=&#34;delfol&#34;&gt;DELFOL&lt;/h1&gt;
 
-&lt;p&gt;Enter DELFOL, the venue for formal work at ACL 2019. Given its somewhat esoteric topic, this workshop was quite small, but I found it really exciting. To me, the following three questions captured a lot of the work that people were presenting:&lt;/p&gt;
+&lt;p&gt;DELFOL was the venue for formal work at ACL 2019. Given its somewhat esoteric topic, this workshop was quite small, but I found it really exciting. To me, the following three questions captured a lot of the work that people were presenting:&lt;/p&gt;
 
 &lt;ol&gt;
 &lt;li&gt;Assess the learnable capacity of neural network models using empirical studies&lt;/li&gt;
