@@ -41,13 +41,13 @@
 
 &lt;p&gt;An alternate approach to the same problem is RSA, which is not to be confused with the cryptographic protocol of the same name. RSA sidesteps the issue with probing by measuring the degree to which two representations are correlated, not whether the information from one can be recovered from the other.&lt;/p&gt;
 
-&lt;p&gt;Formally, RSA is a method of computing the similarity between two representational spaces $X$ and $Y$. We assume that we do not have the direct ability to compare $x$ to $y$, but instead have two internally defined similarity measures $d_X(x_1, x_2)$ and $d_Y(y_1, y_2)$. For example, one space could be discrete trees, and the other could be neural network hidden states. Additionally, the distance measures need not be symmetric.&lt;/p&gt;
+&lt;p&gt;Formally, RSA is a method of computing the similarity between two representations $X$ and $Y$. We assume that we do not have the direct ability to compare $x$ to $y$, but instead have two internally defined similarity measures $d_X(x_1, x_2)$ and $d_Y(y_1, y_2)$. These measures need not be symmetric.&lt;/p&gt;
 
-&lt;p&gt;To perform RSA, we first compute similarity matrices $M(X)$ and $M(Y)$ where&lt;/p&gt;
+&lt;p&gt;To get an overall measure of similarity, we compute a similar matrices $M(X)$ and $M(Y)$ where&lt;/p&gt;
 
 &lt;p&gt;$$ M(X)_{ij} = d_X(x_i, x_j) $$&lt;/p&gt;
 
-&lt;p&gt;and analogously for $Y$. Once we have these matrices, we compute an overall measure of similarity by taking the correlation between them. I find RSA to be a quite exciting method for future research, as it avoids some of the pitfalls of probing while also being very easy (perhaps easier than probing) to implement. This is not to say that probing should be abandoned completely, as being able to verify the same result with different methods increases confidence in a finding. I recall hearing a talk at ACL in which RSA was already applied to transformer representations and replicated probing findings, although I unfortunately cannot find the paper which reported this.&lt;/p&gt;
+&lt;p&gt;and analogously for $Y$. Once we have these matrices, we compute an overall measure of similarity by taking the correlation between them. I find RSA to be a quite exciting method for future research, as it avoids some of the pitfalls of probing while also being very easy (perhaps easier than probing) to implement. This is not to say that probing should be abandoned completely, as being able to verify the same results with different methods increases their confidence. I recall hearing a talk at ACL in which RSA was already applied to transformer representations and replicated probing findings, although I unfortunately cannot find the paper which reported this.&lt;/p&gt;
 
 &lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
 
