@@ -400,7 +400,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    4 min read
+    5 min read
   </span>
   
 
@@ -548,7 +548,7 @@
 
 <p>$$ f&rsquo;(x, \theta) = \lim_{N \rightarrow \infty} f(x, N\theta) . $$</p>
 
-<p>We define $f&rsquo;$ over the domain ${(x, \theta) \Vert \textrm{the limit above exists}$. Since $f$ is almost-everwhere differentiable, the set of points excluded from the domain is measure-zero.</p>
+<p>We define $f&rsquo;$ over the domain ${(x, \theta) \Vert \textrm{the limit above exists}}$. Since $f$ is almost-everwhere differentiable, the set of points excluded from the domain is measure-zero.</p>
 
 <p>In a neural network, the effect of this transformation is to discretize all of the activations. For example, consider a neuron:</p>
 
@@ -569,15 +569,32 @@
 <li>$L(\textrm{LSTM})$ is a superset of the regular languages, and a subset of the real-time counter languages</li>
 </ul>
 
-<p>The core results about the configuration complexity, some of which are analogous, are:
-* ConvNet has $O(1)$ configurations
-* RNN has $O(1)$ configurations
-* GRU has $O(1)$ configurations
-* LSTM has $O(n^k)$ configurations for hidden size $k$
-* Attention has $2^{O(n)}$ configurations
-* <a href="https://github.com/viking-sudo-rm/stacknn-core" target="_blank">StackNN</a> has $2^{O(n)}$ configurations</p>
+<p>The core results about the configuration complexity, some of which are analogous, are:</p>
+
+<ul>
+<li>ConvNet has $O(1)$ configurations</li>
+<li>RNN has $O(1)$ configurations</li>
+<li>GRU has $O(1)$ configurations</li>
+<li>LSTM has $O(n^k)$ configurations for hidden size $k$</li>
+<li>Attention has $2^{O(n)}$ configurations</li>
+<li><a href="https://github.com/viking-sudo-rm/stacknn-core" target="_blank">StackNN</a> has $2^{O(n)}$ configurations</li>
+</ul>
 
 <p>There are some other results about attention/transformers that I&rsquo;m not going to get into here, since they&rsquo;re not so neat. If you&rsquo;re interested though, I refer you to Section 4 of <a href="https://arxiv.org/abs/1906.01615" target="_blank">the paper</a>.</p>
+
+<h2 id="empirical-evidence">Empirical Evidence</h2>
+
+<h3 id="positive-evidence">Positive Evidence</h3>
+
+<p>The development of this theory was motivated by past empirical results about what RNNs are able to learn. Two types of tasks (counting and reversing) serve as relevant diagnostics for assessing the computational power of different architectures.</p>
+
+<p><a href="https://arxiv.org/abs/1805.04908" target="_blank">Weiss et al.</a> show that LSTMs can learn to count, whereas RNNs and GRUs do not. Similarly, <a href="https://arxiv.org/abs/1906.03648" target="_blank">Sugzgun et al.</a> observe that LSTMs can learn the 1-Dyck counter language, whereas other RNNs do not. This is predicted by the theory since saturated LSTMs can do counting, but saturated RNNs and GRUs are finite state.</p>
+
+<p><a href="https://arxiv.org/abs/1809.02836" target="_blank">Hao et al.</a> show how stack neural networks can solve the (beyond counter language) task of reversing a string, whereas LSTMs fail badly on this. In my paper, I also showed that attention can solve this task. Both of the results are predicted by the theory, since stack neural networks and attention allow for exponential configurations, which are needed to reverse a string, whereas LSTMs are limited to polynomial configurations.</p>
+
+<h3 id="negative-evidence">Negative Evidence</h3>
+
+<p>While we find that regularized neural networks display the counting pattern reported by <a href="https://arxiv.org/abs/1805.04908" target="_blank">Weiss et al.</a>, we find that the unregularized LSTM, GRU, and RNN can all learn to model the language $a^nb^nc$, which requires counting. Thus, it might be more precise to say that the saturated theory seems to describe the learnable capacity of <em>regularized</em> networks. One possible interpretation of this is that the constraints imposed by regularization prevent the network from learning strategies beyond the saturated capacity.</p>
 
 <h2 id="proof-sketches">Proof Sketches</h2>
 

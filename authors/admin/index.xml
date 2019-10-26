@@ -29,7 +29,7 @@
 
 &lt;p&gt;$$ f&amp;rsquo;(x, \theta) = \lim_{N \rightarrow \infty} f(x, N\theta) . $$&lt;/p&gt;
 
-&lt;p&gt;We define $f&amp;rsquo;$ over the domain ${(x, \theta) \Vert \textrm{the limit above exists}$. Since $f$ is almost-everwhere differentiable, the set of points excluded from the domain is measure-zero.&lt;/p&gt;
+&lt;p&gt;We define $f&amp;rsquo;$ over the domain ${(x, \theta) \Vert \textrm{the limit above exists}}$. Since $f$ is almost-everwhere differentiable, the set of points excluded from the domain is measure-zero.&lt;/p&gt;
 
 &lt;p&gt;In a neural network, the effect of this transformation is to discretize all of the activations. For example, consider a neuron:&lt;/p&gt;
 
@@ -50,15 +50,32 @@
 &lt;li&gt;$L(\textrm{LSTM})$ is a superset of the regular languages, and a subset of the real-time counter languages&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;The core results about the configuration complexity, some of which are analogous, are:
-* ConvNet has $O(1)$ configurations
-* RNN has $O(1)$ configurations
-* GRU has $O(1)$ configurations
-* LSTM has $O(n^k)$ configurations for hidden size $k$
-* Attention has $2^{O(n)}$ configurations
-* &lt;a href=&#34;https://github.com/viking-sudo-rm/stacknn-core&#34; target=&#34;_blank&#34;&gt;StackNN&lt;/a&gt; has $2^{O(n)}$ configurations&lt;/p&gt;
+&lt;p&gt;The core results about the configuration complexity, some of which are analogous, are:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;ConvNet has $O(1)$ configurations&lt;/li&gt;
+&lt;li&gt;RNN has $O(1)$ configurations&lt;/li&gt;
+&lt;li&gt;GRU has $O(1)$ configurations&lt;/li&gt;
+&lt;li&gt;LSTM has $O(n^k)$ configurations for hidden size $k$&lt;/li&gt;
+&lt;li&gt;Attention has $2^{O(n)}$ configurations&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/viking-sudo-rm/stacknn-core&#34; target=&#34;_blank&#34;&gt;StackNN&lt;/a&gt; has $2^{O(n)}$ configurations&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;There are some other results about attention/transformers that I&amp;rsquo;m not going to get into here, since they&amp;rsquo;re not so neat. If you&amp;rsquo;re interested though, I refer you to Section 4 of &lt;a href=&#34;https://arxiv.org/abs/1906.01615&#34; target=&#34;_blank&#34;&gt;the paper&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;empirical-evidence&#34;&gt;Empirical Evidence&lt;/h2&gt;
+
+&lt;h3 id=&#34;positive-evidence&#34;&gt;Positive Evidence&lt;/h3&gt;
+
+&lt;p&gt;The development of this theory was motivated by past empirical results about what RNNs are able to learn. Two types of tasks (counting and reversing) serve as relevant diagnostics for assessing the computational power of different architectures.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://arxiv.org/abs/1805.04908&#34; target=&#34;_blank&#34;&gt;Weiss et al.&lt;/a&gt; show that LSTMs can learn to count, whereas RNNs and GRUs do not. Similarly, &lt;a href=&#34;https://arxiv.org/abs/1906.03648&#34; target=&#34;_blank&#34;&gt;Sugzgun et al.&lt;/a&gt; observe that LSTMs can learn the 1-Dyck counter language, whereas other RNNs do not. This is predicted by the theory since saturated LSTMs can do counting, but saturated RNNs and GRUs are finite state.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://arxiv.org/abs/1809.02836&#34; target=&#34;_blank&#34;&gt;Hao et al.&lt;/a&gt; show how stack neural networks can solve the (beyond counter language) task of reversing a string, whereas LSTMs fail badly on this. In my paper, I also showed that attention can solve this task. Both of the results are predicted by the theory, since stack neural networks and attention allow for exponential configurations, which are needed to reverse a string, whereas LSTMs are limited to polynomial configurations.&lt;/p&gt;
+
+&lt;h3 id=&#34;negative-evidence&#34;&gt;Negative Evidence&lt;/h3&gt;
+
+&lt;p&gt;While we find that regularized neural networks display the counting pattern reported by &lt;a href=&#34;https://arxiv.org/abs/1805.04908&#34; target=&#34;_blank&#34;&gt;Weiss et al.&lt;/a&gt;, we find that the unregularized LSTM, GRU, and RNN can all learn to model the language $a^nb^nc$, which requires counting. Thus, it might be more precise to say that the saturated theory seems to describe the learnable capacity of &lt;em&gt;regularized&lt;/em&gt; networks. One possible interpretation of this is that the constraints imposed by regularization prevent the network from learning strategies beyond the saturated capacity.&lt;/p&gt;
 
 &lt;h2 id=&#34;proof-sketches&#34;&gt;Proof Sketches&lt;/h2&gt;
 
