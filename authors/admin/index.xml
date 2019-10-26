@@ -93,11 +93,13 @@
 
 &lt;p&gt;To show that the counter languages are an upper bound, we write the saturated gate network for a particular counter state neuron $c$ as follows:&lt;/p&gt;
 
-&lt;p&gt;$$ \lim_{N \rightarrow \infty}  c&lt;em&gt;t = \lim&lt;/em&gt;{N \rightarrow \infty} f&lt;em&gt;t c&lt;/em&gt;{t-1} + i_t {\tilde{c}}_t $$&lt;/p&gt;
+&lt;p&gt;$$ \lim_{N \rightarrow \infty} c&lt;em&gt;t = \lim&lt;/em&gt;{N \rightarrow \infty} f&lt;em&gt;t c&lt;/em&gt;{t-1} + i_t {\tilde{c}}_t $$&lt;/p&gt;
 
 &lt;p&gt;$$ = \lim&lt;em&gt;{N \rightarrow \infty} a c&lt;/em&gt;{t-1} + b $$&lt;/p&gt;
 
-&lt;p&gt;where $a \in {0, 1}$ and $b \in {-1, 0, 1}$.&lt;/p&gt;
+&lt;p&gt;where $ a \in {0, 1} $ and $ b \in {-1, 0, 1} $.&lt;/p&gt;
+
+&lt;p&gt;$$ = \lim&lt;em&gt;{N \rightarrow \infty} a c&lt;/em&gt;{t-1} + b $$&lt;/p&gt;
 </description>
     </item>
     
