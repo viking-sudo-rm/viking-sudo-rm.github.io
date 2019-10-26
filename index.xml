@@ -171,7 +171,7 @@
 
 &lt;h3 id=&#34;negative-evidence&#34;&gt;Negative Evidence&lt;/h3&gt;
 
-&lt;p&gt;While we find that regularized neural networks display the counting pattern reported by &lt;a href=&#34;https://arxiv.org/abs/1805.04908&#34; target=&#34;_blank&#34;&gt;Weiss et al.&lt;/a&gt;, we find that the unregularized LSTM, GRU, and RNN can all learn to model the language $a^nb^nc$, which requires counting. Thus, it might be more precise to say that the saturated theory seems to describe the learnable capacity of &lt;em&gt;regularized&lt;/em&gt; networks. One possible interpretation of this is that the constraints imposed by regularization prevent the network from learning strategies beyond the saturated capacity.&lt;/p&gt;
+&lt;p&gt;While I find that regularized neural networks display the counting pattern reported by &lt;a href=&#34;https://arxiv.org/abs/1805.04908&#34; target=&#34;_blank&#34;&gt;Weiss et al.&lt;/a&gt;, I also find that the unregularized LSTM, GRU, and RNN can all learn to model the language $a^nb^nc$, which requires counting. Thus, it might be more precise to say that the saturated theory seems to describe the learnable capacity of &lt;em&gt;regularized&lt;/em&gt; networks. One possible interpretation of this is that the constraints imposed by regularization prevent the network from learning strategies beyond the saturated capacity.&lt;/p&gt;
 
 &lt;h2 id=&#34;proof-sketches&#34;&gt;Proof Sketches&lt;/h2&gt;
 
