@@ -99,7 +99,9 @@
 
 &lt;p&gt;where $ a \in {0, 1} $ and $ b \in {-1, 0, 1} $.&lt;/p&gt;
 
-&lt;p&gt;$$ = \lim&lt;em&gt;{N \rightarrow \infty} a c&lt;/em&gt;{t-1} + b $$&lt;/p&gt;
+&lt;p&gt;$$ \lim_{N \rightarrow \infty} $$&lt;/p&gt;
+
+&lt;p&gt;$$ ac_{t-1} + b $$&lt;/p&gt;
 </description>
     </item>
     
