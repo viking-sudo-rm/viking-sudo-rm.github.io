@@ -83,7 +83,7 @@
 
 &lt;p&gt;To show that $L(\textrm{RNN})$ is the regular languages, we show two directions of containment.&lt;/p&gt;
 
-&lt;p&gt;First, we prove that the the regular languages are an upper bound. We do this by showing that the configuration complexity of the RNN is finite, i.e. $O(1)$. Since each neuron has two possible values ($-1$ and $1$), and there are $k$ neurons in the state, the number of configurations of the state vector is $O(1)$.&lt;/p&gt;
+&lt;p&gt;First, we prove that the the regular languages are an upper bound. We do this by showing that the configuration complexity of the RNN is finite, i.e. $O(1)$. Since each neuron has two possible values ($-1$ and $1$), and there are $k$ neurons in the state, the number of configurations of the state vector is $O(2^k) = O(1)$.&lt;/p&gt;
 
 &lt;p&gt;The other direction is a little more complicated. We need to construct an RNN to simulate an arbitrary finite state machine. A construction for this is provided in Lemma B.1.&lt;/p&gt;
 
