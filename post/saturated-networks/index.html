@@ -548,7 +548,7 @@
 
 <p>$$ f&rsquo;(x, \theta) = \lim_{N \rightarrow \infty} f(x, N\theta) . $$</p>
 
-<p>We define $f&rsquo;$ over the domain ${(x, \theta) \Vert \textrm{the limit above exists}}$. Since $f$ is almost-everwhere differentiable, the set of points excluded from the domain is measure-zero.</p>
+<p>We define $f&rsquo;$ over the domain of $(x, \theta)$ for which the limit above exists. Since $f$ is almost-everwhere differentiable, the set of points excluded from the domain is measure-zero.</p>
 
 <p>In a neural network, the effect of this transformation is to discretize all of the activations. For example, consider a neuron:</p>
 
@@ -612,15 +612,15 @@
 
 <p>To show that the counter languages are an upper bound, we write the saturated gate network for a particular counter state neuron $c$ as follows:</p>
 
-<p>$$ \lim_{N \rightarrow \infty} c<em>t = \lim</em>{N \rightarrow \infty} f<em>t c</em>{t-1} + i_t {\tilde{c}}_t $$</p>
+<!-- For some reason, the normal \lim_ is not working here. Neither does f_tc_{t-1}. I guess -->
 
-<p>$$ = \lim<em>{N \rightarrow \infty} a c</em>{t-1} + b $$</p>
+<p>$$ \underset{N \rightarrow \infty}{\lim} c_t $$</p>
 
-<p>where $ a \in {0, 1} $ and $ b \in {-1, 0, 1} $.</p>
+<p>$$ = \underset{N \rightarrow \infty}{\lim} fc_{t-1} + i{\tilde c}_t $$</p>
 
-<p>$$ \lim_{N \rightarrow \infty} $$</p>
+<p>$$ = \underset{N \rightarrow \infty}{\lim} ac_{t-1} + b $$</p>
 
-<p>$$ ac_{t-1} + b $$</p>
+<p>where $a$ is $0$ or $1$ and $b$ is $-1$, $0$, or $1$. With unrestricted $a$ and $b$, this update parameterized a real-time counter machine update. Thus, the counter languages are an upper bound on the saturated LSTM capacity.</p>
 
     </div>
 
