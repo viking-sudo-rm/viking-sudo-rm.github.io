@@ -101,7 +101,7 @@
 
 &lt;p&gt;$$ = \underset{N \rightarrow \infty}{\lim} ac_{t-1} + b $$&lt;/p&gt;
 
-&lt;p&gt;where $a$ is $0$ or $1$ and $b$ is $-1$, $0$, or $1$. With unrestricted $a$ and $b$, this update parameterized a real-time counter machine update. Thus, the counter languages are an upper bound on the saturated LSTM capacity.&lt;/p&gt;
+&lt;p&gt;where $a$ is $0$ or $1$ and $b$ is $-1$, $0$, or $1$. This equation parameterized a real-time counter machine update. Thus, the counter languages are an upper bound on the saturated LSTM capacity.&lt;/p&gt;
 </description>
     </item>
     
