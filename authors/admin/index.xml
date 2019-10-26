@@ -83,9 +83,9 @@
 
 &lt;p&gt;To show that $L(\textrm{RNN})$ is the regular languages, we show two directions of containment.&lt;/p&gt;
 
-&lt;p&gt;First, we prove that the the regular languages are an upper bound. We do this by showing that the configuration complexity of the RNN is finite, i.e. $O(1)$. Since each neuron has 2 possible values (-1 and 1), and there are $k$ neurons, the number of configurations of the state vector is $O(1)$.&lt;/p&gt;
+&lt;p&gt;First, we prove that the the regular languages are an upper bound. We do this by showing that the configuration complexity of the RNN is finite, i.e. $O(1)$. Since each neuron has two possible values ($-1$ and $1$), and there are $k$ neurons in the state, the number of configurations of the state vector is $O(1)$.&lt;/p&gt;
 
-&lt;p&gt;The other direction is a little more complicated. We need to construct an RNN to simulate an arbitrary finite state machine. The construction for this is provided in Lemma B.1.&lt;/p&gt;
+&lt;p&gt;The other direction is a little more complicated. We need to construct an RNN to simulate an arbitrary finite state machine. A construction for this is provided in Lemma B.1.&lt;/p&gt;
 
 &lt;h3 id=&#34;lstm-capacity-and-complexity&#34;&gt;LSTM Capacity and Complexity&lt;/h3&gt;
 
@@ -93,7 +93,7 @@
 
 &lt;p&gt;To show that the counter languages are an upper bound, we write the saturated gate network for a particular counter state neuron $c$ as follows:&lt;/p&gt;
 
-&lt;p&gt;$$ \lim_{N \rightarrow \infty}  c&lt;em&gt;t = \lim&lt;/em&gt;{N \rightarrow \infty} f&lt;em&gt;t c&lt;/em&gt;{t-1} + i_t {\tilde c}_t $$&lt;/p&gt;
+&lt;p&gt;$$ \lim_{N \rightarrow \infty}  c&lt;em&gt;t = \lim&lt;/em&gt;{N \rightarrow \infty} f&lt;em&gt;t c&lt;/em&gt;{t-1} + i_t {\tilde{c}}_t $$&lt;/p&gt;
 
 &lt;p&gt;$$ = \lim&lt;em&gt;{N \rightarrow \infty} a c&lt;/em&gt;{t-1} + b $$&lt;/p&gt;
 
