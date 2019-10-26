@@ -35,39 +35,39 @@
   
   <url>
     <loc>http://lambdaviking.com/authors/admin/</loc>
-    <lastmod>2019-08-06T00:00:00+00:00</lastmod>
+    <lastmod>2019-10-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://lambdaviking.com/authors/</loc>
-    <lastmod>2019-08-06T00:00:00+00:00</lastmod>
+    <lastmod>2019-10-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://lambdaviking.com/categories/</loc>
-    <lastmod>2019-08-06T00:00:00+00:00</lastmod>
+    <lastmod>2019-10-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://lambdaviking.com/categories/nlp/</loc>
-    <lastmod>2019-08-06T00:00:00+00:00</lastmod>
+    <lastmod>2019-10-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://lambdaviking.com/post/</loc>
-    <lastmod>2019-08-06T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://lambdaviking.com/post/the-state-of-interpretability-in-nlp/</loc>
-    <lastmod>2019-08-06T00:00:00+00:00</lastmod>
+    <lastmod>2019-10-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://lambdaviking.com/post/saturated-networks/</loc>
+    <lastmod>2019-10-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://lambdaviking.com/post/the-state-of-interpretability-in-nlp/</loc>
     <lastmod>2019-08-06T00:00:00+00:00</lastmod>
   </url>
   

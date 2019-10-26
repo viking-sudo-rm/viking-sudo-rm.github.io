@@ -28,7 +28,7 @@
   
     
   
-  <meta name="description" content="Post based on Sequential neural networks as automata.">
+  <meta name="description" content="Post based on Sequential Neural Networks as Automata.">
 
   
   <link rel="alternate" hreflang="en-us" href="http://lambdaviking.com/post/saturated-networks/">
@@ -111,12 +111,12 @@
   <meta property="og:site_name" content="Will Merrill">
   <meta property="og:url" content="http://lambdaviking.com/post/saturated-networks/">
   <meta property="og:title" content="Theory of Saturated Neural Networks | Will Merrill">
-  <meta property="og:description" content="Post based on Sequential neural networks as automata."><meta property="og:image" content="http://lambdaviking.com/post/saturated-networks/featured.png">
+  <meta property="og:description" content="Post based on Sequential Neural Networks as Automata."><meta property="og:image" content="http://lambdaviking.com/post/saturated-networks/featured.png">
   <meta property="twitter:image" content="http://lambdaviking.com/post/saturated-networks/featured.png"><meta property="og:locale" content="en-us">
   
-  <meta property="article:published_time" content="2019-08-06T00:00:00&#43;00:00">
+  <meta property="article:published_time" content="2019-10-26T00:00:00&#43;00:00">
   
-  <meta property="article:modified_time" content="2019-08-06T00:00:00&#43;00:00">
+  <meta property="article:modified_time" content="2019-10-26T00:00:00&#43;00:00">
   
 
   
@@ -358,15 +358,15 @@
   <h1 itemprop="name">Theory of Saturated Neural Networks</h1>
 
   
-  <p class="page-subtitle">Post based on <em>Sequential neural networks as automata</em>.</p>
+  <p class="page-subtitle">Post based on <em>Sequential Neural Networks as Automata</em>.</p>
   
 
   
 
 
 
-<meta content="2019-08-06 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-<meta content="2019-08-06 00:00:00 &#43;0000 UTC" itemprop="dateModified">
+<meta content="2019-10-26 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2019-10-26 00:00:00 &#43;0000 UTC" itemprop="dateModified">
 
 <div class="article-metadata">
 
@@ -391,7 +391,7 @@
     
       
     
-    <time>Aug 6, 2019</time>
+    <time>Oct 26, 2019</time>
   </span>
   
 
@@ -400,7 +400,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    8 min read
+    4 min read
   </span>
   
 
@@ -538,79 +538,68 @@
     <div class="article-style" itemprop="articleBody">
       
 
-<p>This post is a summary of my thoughts and experiences at ACL 2019, focused around the theme of interpretability. After spending most of the summer thinking about things besides neural networks, I was abruptly thrown back into things upon arriving in Florence. I spent a lot of my downtime with friends from Yale that I was staying with. On the other hand, I also met my future colleagues at AI2 and many other young researchers who are interested in similar issues of the interpretability and formal analysis of neural networks. In this way, the conference felt like a soft threshold between old and new.</p>
+<p>In this post, my goal is to explain the key ideas from my paper <a href="https://arxiv.org/abs/1906.01615" target="_blank">Sequential Neural Networks as Automata</a>. The main idea is that, if we making some simplifying assumptions about how neural networks work, we can derive a theory of network expressiveness (what formal languages can different architectures model?) that seems to agree with the classes of formal languages that different networks can learn when trained by gradient descent. Thus, this restricted theoretical capacity seems to be (potentially) a good proxy for the empirical learnable capacity of various networks.</p>
 
-<p>There were plenty of exciting things going on at the main conference, from work on incorporated graph representations into transformers to the development of more energy-efficient non-autoregressive NLP models. In this post, though, I&rsquo;m going to focus on parts that I was most directly involved in, which were the Blackbox NLP workshop on interpretability and the Deep Learning and Formal Languages (DELFOL) workshop.</p>
+<h2 id="saturated-networks">Saturated Networks</h2>
 
-<h1 id="blackbox-nlp">Blackbox NLP</h1>
+<p>In the paper, I referred to the simplified network whose capacity we can analyze as an <em>asymptotic</em> network. However, after talking with Gail Weiss, I now believe the term <em>saturated</em> is more descriptive, and plan to use this term going forward.</p>
 
-<p>This was the second iteration of the Blackbox workshop. While the last Blackbox at EMNLP was also quite large and interesting, it had felt to me like a quite interdisciplinary meeting of researchers doing very different things. In contrast, I got the impression at this year&rsquo;s meeting that a community of interpretability-minded researchers with similar goals and methods has formed. This is consistent with the wider interest that interpretability has sparked in the larger NLP community and the number of interpretability papers presented in the main conference. In the closing panel of the workshop, it was mentioned that perhaps interpretability would become a session within the conference at the next ACL meeting instead of a supplementary workshop.</p>
+<p>A neural network is a function $f(x, \theta)$ that is almost-everywhere differentiable with respect to the parameters $\theta$. Given such a function, we derive the saturated network $f&rsquo;$ as</p>
 
-<p>One of the main goals of interpretability research is to assess what kinds of information is encoded in different representations within a neural network. In particular, people (including myself) are interested in how different models encode grammatical information. Several methods were discussed for addressing this question, including attention, probing, representational similarity analysis (RSA).</p>
+<p>$$ f&rsquo;(x, \theta) = \lim_{N \rightarrow \infty} f(x, N\theta) . $$</p>
 
-<h2 id="attention">Attention</h2>
+<p>We define $f&rsquo;$ over the domain ${(x, \theta) \Vert \textrm{the limit above exists}$. Since $f$ is almost-everwhere differentiable, the set of points excluded from the domain is measure-zero.</p>
 
-<p>A classical way of interpreting whether networks encode grammatical information is by looking at attention alignments. For example, we might expect that, if there is a dependency between words $i$ and $j$, then position $i$ in the network should attend to position $j$. While this probably works to some degree, attention maps can often get messy. Also, as <a href="https://arxiv.org/abs/1906.03731" target="_blank">Serrano et al.</a> pointed out in their work at the main conference, perturbing the attention distribution has surprisingly little effect on a network&rsquo;s behavior. Thus, we might want to look to other methods for interpreting neural representations.</p>
+<p>In a neural network, the effect of this transformation is to discretize all of the activations. For example, consider a neuron:</p>
 
-<h2 id="probing">Probing</h2>
+<p>$$ \sigma(wx + b) $$</p>
 
-<p>Probing refers to using a linear classifier to try to recover some kind of information, say part of speech information, from some representation within a model. This has been a standard way of interpreting neural representations throughout the last year. The underlying assumption is that, if information is recoverable in a single linear layer, then it is probably strongly encoded in the representation. As was pointed out to me by <a href="https://homes.cs.washington.edu/~jkasai/" target="_blank">Jungo Kasai</a>, one pitfall of this method is that it just assesses whether or not the information of interest is encoded in a representation, not to what degree it is there. For example, if a small amount of the representation in some network is representing grammatical information, whereas the rest of it is representing spurious correlations between words, probing would still suggest that that layer is encoding grammar. In such a case, is it really reasonable to conclude that a grammatical representation is an important part of the behavior which the network is learning?</p>
+<p>where $\sigma$ is the sigmoid function. When we take the limit of $\sigma(Nwx + Nb)$, the output of the neuron approaches either $0$ or $1$. This is what I mean by <em>discretization</em>.</p>
 
-<h2 id="rsa">RSA</h2>
+<p>After applying this discretization to the full network, we can analyze the computational capacity of the resulting discrete automaton. We also define a notion of space complexity associated with these saturated networks in the paper. Intuitively, this measure of complexity is just the number of configurations that the saturated network can have after reading a sequence of length $n$. For more details on this, consult <a href="https://arxiv.org/abs/1906.01615" target="_blank">the paper</a>.</p>
 
-<p>An alternate approach to the same problem is RSA, which is not to be confused with the cryptographic protocol of the same name. RSA sidesteps the issue with probing by measuring the degree to which two representations are correlated, not whether the information from one can be recovered from the other.</p>
+<h2 id="summary-of-results">Summary of Results</h2>
 
-<p>Formally, RSA is a method of computing the similarity between two representations $X$ and $Y$. We assume that we do not have the direct ability to compare $x$ to $y$, but instead have two internally defined similarity measures $d_X(x_1, x_2)$ and $d_Y(y_1, y_2)$. These measures need not be symmetric.</p>
+<p>By $L(M)$, we denote the set of formal languages that a machine $M$ can accept. Some key capacity results from the paper are as follows:</p>
 
-<p>To get an overall measure of similarity, we compute a similar matrices $M(X)$ and $M(Y)$ where</p>
+<ul>
+<li>$L(\textrm{ConvNet})$ is a proper subset of the regular languages</li>
+<li>$L(\textrm{RNN})$ is exactly the regular languages</li>
+<li>$L(\textrm{GRU})$ is exactly the regular languages</li>
+<li>$L(\textrm{LSTM})$ is a superset of the regular languages, and a subset of the real-time counter languages</li>
+</ul>
 
-<p>$$ M(X)_{ij} = d_X(x_i, x_j) $$</p>
+<p>The core results about the configuration complexity, some of which are analogous, are:
+* ConvNet has $O(1)$ configurations
+* RNN has $O(1)$ configurations
+* GRU has $O(1)$ configurations
+* LSTM has $O(n^k)$ configurations for hidden size $k$
+* Attention has $2^{O(n)}$ configurations
+* <a href="https://github.com/viking-sudo-rm/stacknn-core" target="_blank">StackNN</a> has $2^{O(n)}$ configurations</p>
 
-<p>and analogously for $Y$. Once we have these matrices, we compute an overall measure of similarity by taking the correlation between them. I find RSA to be a quite exciting method for future research, as it avoids some of the pitfalls of probing while also being very easy (perhaps easier than probing) to implement. This is not to say that probing should be abandoned completely, as being able to verify the same results with different methods increases their confidence. I recall hearing a talk at ACL in which RSA was already applied to transformer representations and replicated probing findings, although I unfortunately cannot find the paper which reported this.</p>
+<p>There are some other results about attention/transformers that I&rsquo;m not going to get into here, since they&rsquo;re not so neat. If you&rsquo;re interested though, I refer you to Section 4 of <a href="https://arxiv.org/abs/1906.01615" target="_blank">the paper</a>.</p>
 
-<h2 id="conclusion">Conclusion</h2>
+<h2 id="proof-sketches">Proof Sketches</h2>
 
-<p>Probing and RSA are two good methods for understanding what information is encoded in some representation within a trained network. This is still a slightly different question than asking what information is particular relevant for the decision that a network makes given some input, which can be addressed using gradient methods or perturbation studies. I think that interpreting representations and interpreting decisions are both interesting questions.</p>
+<h3 id="rnn-capacity-and-complexity">RNN Capacity and Complexity</h3>
 
-<p>Additionally, both of these questions have analogs in the formal domain, where we can analyze what representations different neural network hidden states can encode, or what classes of formal languages a certain architecture can accept. As others at ACL also mentioned, I would like to see future work connecting empirical interpretability research to the formal analysis that has been done.</p>
+<p>To show that $L(\textrm{RNN})$ is the regular languages, we show two directions of containment.</p>
 
-<p>Finally, as many people expressed during the conference, I think that a good goal for the next year is progress towards constructive interpretability work. In other words, our interpretation of networks should allow us to make smarter architectures.</p>
+<p>First, we prove that the the regular languages are an upper bound. We do this by showing that the configuration complexity of the RNN is finite, i.e. $O(1)$. Since each neuron has 2 possible values (-1 and 1), and there are $k$ neurons, the number of configurations of the state vector is $O(1)$.</p>
 
-<h1 id="delfol">DELFOL</h1>
+<p>The other direction is a little more complicated. We need to construct an RNN to simulate an arbitrary finite state machine. The construction for this is provided in Lemma B.1.</p>
 
-<p>DELFOL was the venue for formal work at ACL 2019. Given its somewhat esoteric topic, this workshop was quite small, but I found it really exciting. To me, the following three questions captured a lot of the work that people were presenting:</p>
+<h3 id="lstm-capacity-and-complexity">LSTM Capacity and Complexity</h3>
 
-<ol>
-<li>Assess the learnable capacity of neural network models using empirical studies</li>
-<li>Identify formal properties of neural architectures that lead to different kinds of inductive bias or learnable/representational capacity</li>
-<li>&ldquo;Distill&rdquo; neural network models into smaller, more interpretable discrete models</li>
-</ol>
+<p>In the LSTM case, even when we discretize the network, we get a model with more than finite state. This is because the LSTM&rsquo;s gating architecture is capable of counting (<a href="https://arxiv.org/abs/1805.04908" target="_blank">Weiss et al.</a>, 2018).</p>
 
-<h2 id="empirical-experiments-about-learnability">Empirical Experiments about Learnability</h2>
+<p>To show that the counter languages are an upper bound, we write the saturated gate network for a particular counter state neuron $c$ as follows:</p>
 
-<p>On the empirical front, <a href="https://arxiv.org/abs/1906.03648" target="_blank">Suzgun et al.</a> reported that LSTMs generalizably learn to model the 1-Dyck language, which consists of parenthetic expressions with one type of parentheses. Other types of RNNs, on the other hand, were not able to do this. Additionally, LSTMs could not model 2-Dyck, but could model independently mixed versions of 1-Dyck.</p>
+<p>$$ \lim_{N \rightarrow \infty}  c<em>t = \lim</em>{N \rightarrow \infty} f<em>t c</em>{t-1} + i_t {\tilde c}_t $$</p>
 
-<p>Since 1-Dyck is a counter language, this is further evidence that LSTMs can count, unlike other kinds of RNNs. Additionally, since 2-Dyck is a context-free language that requires more memory than is available to counter machines, we have further experimental evidence that LSTM memory, like counter machine memory, is not sufficient for complex hierarchical representations. As <a href="https://bobfrank1.github.io/" target="_blank">Bob Frank</a> summarized in his invited talk at DELFOL, LSTMs also struggle to do other memory intensive context-free things, like reversing strings.</p>
+<p>$$ = \lim<em>{N \rightarrow \infty} a c</em>{t-1} + b $$</p>
 
-<p>While <a href="https://arxiv.org/abs/1906.01615" target="_blank">my paper</a> at DELFOL was mostly theoretical results, I also had some experimental stuff that agreed with these conclusions.</p>
-
-<h2 id="formal-analysis-of-inductive-bias-and-capacity">Formal Analysis of Inductive Bias and Capacity</h2>
-
-<h3 id="saturated-networks">Saturated Networks</h3>
-
-<p>Building on work done by <a href="https://arxiv.org/abs/1805.04908" target="_blank">Weiss et al.</a>, <a href="https://arxiv.org/abs/1906.01615" target="_blank">my paper</a> at DELFOL developed a theory of <strong>saturated networks</strong>, or networks where the activation functions are restricted to their asymptotic values instead of intermediate rational values. I proved that saturated RNNs and GRUs are equivalent to finite-state automata in capacity, whereas saturated LSTMs are equivalent to a restricted class of counter machines. <a href="https://bobfrank1.github.io/" target="_blank">Bob Frank</a> also synthesized my results and Weiss et al.&rsquo;s results in his invited talk.</p>
-
-<p>I think these theoretical results about saturated networks are interesting because they agree with empirical results (see previous section) about the types of languages that natural networks are empirically able to learn and generalize. This suggests that the capacity of the saturated network might represent something like the inductive bias or effective learnable capacity of the general network.</p>
-
-<h3 id="other-formal-properties">Other Formal Properties</h3>
-
-<p>In his talk, <a href="https://bobfrank1.github.io/" target="_blank">Bob Frank</a> also mentioned other ways of understanding the abilities of different networks. In particular, he mentioned studying the closure properties of representable or learnable languages as a potential way to build a theory. Another notable formal property that he mentioned was semilinearity. In his talk, <a href="https://homes.cs.washington.edu/~nasmith/" target="_blank">Noah Smith</a> mentioned rational recurrence as one way to analyze different neural architectures. While less linguistically motivated, this property is nice because of its connections to classical finite-state methods in NLP and the interpretability that comes along with this.</p>
-
-<h3 id="distillation">Distillation</h3>
-
-<p>Finally, a general theme at DELFOL that I found especially interesting was distillation. This refers to converting a neural network to a smaller and more interpretable discrete model which approximates the same behavior. This has a variety of practical benefits: deployment on smaller devices, interpretability, and possibly regularization, to name a few. I think one of the reasons why I find this topic interesting is because it is a way for theory to provide very concrete solutions to practical problems.</p>
-
-<p>As I see it, there are two main ways that distillation has been done. <a href="https://arxiv.org/abs/1711.09576" target="_blank">Weiss et al.</a> pioneered the <strong>query-based</strong> approach, which involves using the <a href="https://people.eecs.berkeley.edu/~dawnsong/teaching/s10/papers/angluin87.pdf" target="_blank">L* algorithm</a> to learn a finite-state machine using black-box queries to a neural network. The other type of distillation is <strong>spectral</strong>, which <a href="https://pageperso.lis-lab.fr/~remi.eyraud/WP/" target="_blank">Rémi Eyraud</a> spoke about at DELFOL. This involves building a Hankel matrix for some language and then using SVD to extract a smaller matrix representing a weighted finite-state automaton. While these are the two methods that have been investigated, I&rsquo;m interested in other ways to achieve distillation, and I have been doing some preliminary experiments using other methods. More on that to come!</p>
+<p>where $a \in {0, 1}$ and $b \in {-1, 0, 1}$.</p>
 
     </div>
 
