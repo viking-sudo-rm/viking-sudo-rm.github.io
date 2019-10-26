@@ -115,7 +115,7 @@
       <guid>http://lambdaviking.com/post/saturated-networks/</guid>
       <description>
 
-&lt;p&gt;In this post, my goal is to explain the key ideas from my paper &lt;a href=&#34;https://arxiv.org/abs/1906.01615&#34; target=&#34;_blank&#34;&gt;Sequential Neural Networks as Automata&lt;/a&gt;. The main idea is that, if we making some simplifying assumptions about how neural networks work, we can derive a theory of network expressiveness (what formal languages can different architectures model?) that seems to agree with the classes of formal languages that different networks can learn when trained by gradient descent. Thus, this restricted theoretical capacity seems to be (potentially) a good proxy for the empirical learnable capacity of various networks.&lt;/p&gt;
+&lt;p&gt;The main idea of my paper &lt;a href=&#34;https://arxiv.org/abs/1906.01615&#34; target=&#34;_blank&#34;&gt;Sequential Neural Networks as Automata&lt;/a&gt; is that, if we making some simplifying assumptions about how neural networks work, we can derive a theory of network expressiveness (what formal languages can different architectures model?) that seems to agree with the classes of formal languages that different networks can learn when trained by gradient descent. Thus, this restricted theoretical capacity seems to be (potentially) a good proxy for the empirical learnable capacity of various networks.&lt;/p&gt;
 
 &lt;h2 id=&#34;saturated-networks&#34;&gt;Saturated Networks&lt;/h2&gt;
 
