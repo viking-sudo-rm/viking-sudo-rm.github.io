@@ -29,7 +29,7 @@
 
 &lt;p&gt;$$ f&amp;rsquo;(x, \theta) = \lim_{N \rightarrow \infty} f(x, N\theta) . $$&lt;/p&gt;
 
-&lt;p&gt;We define $f&amp;rsquo;$ over the domain of $(x, \theta)$ for which the limit above exists. Since $f$ is almost-everwhere differentiable, the set of points excluded from the domain is measure-zero.&lt;/p&gt;
+&lt;p&gt;We define $f&amp;rsquo;$ over the domain of $(x, \theta)$ for which the limit above exists.&lt;/p&gt;
 
 &lt;p&gt;In a neural network, the effect of this transformation is to discretize all of the activations. For example, consider a neuron:&lt;/p&gt;
 
