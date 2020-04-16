@@ -6,10 +6,41 @@
     <description>Recent content on Will Merrill</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 26 Oct 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 16 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="http://lambdaviking.com/authors/admin/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>A Formal Hierarchy of RNN Architectures</title>
+      <link>http://lambdaviking.com/post/rr-hierarchy/</link>
+      <pubDate>Thu, 16 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://lambdaviking.com/post/rr-hierarchy/</guid>
+      <description>&lt;p&gt;This is a blog post introducing our recent paper &lt;em&gt;A Formal Hierarchy of RNN Architectures&lt;/em&gt;. Compared to the original paper, this post is more of a summary, and will attempt to explain the significance of the results assuming less familiarity with formal language theory.&lt;/p&gt;
+
+&lt;p&gt;Understanding the practical capacity of neural network architectures is an important question for both the design of new architectures and the interpretability of current ones. By &amp;ldquo;practical capacity&amp;rdquo;, we mean the classes of tasks that an architecture can discover solutions to via standard training methods. It has been known since &lt;a href=&#34;https://dl.acm.org/doi/10.1145/130385.130432&#34; target=&#34;_blank&#34;&gt;Siegelmann and Sontag (1992)&lt;/a&gt; that RNNs with infinite time and precision are Turing-complete; however, these unrealistic assumptions make this result a bad formal model for practical learnable capacity.&lt;/p&gt;
+
+&lt;p&gt;Over the last year or two, several works have addressed this by relating deep NLP architectures like RNNs to existing formal models in automata theory, because formal languages and automata are well understood and easy to analyze compared to neural networks. &lt;a href=&#34;https://arxiv.org/abs/1805.04908&#34; target=&#34;_blank&#34;&gt;Weiss et al. (2018)&lt;/a&gt; showed a connection between LSTMs and counter machines (CMs), and demonstrated how LSTMs learn to count to solve certain formal tasks that other RNNs cannot solve. Building on this, &lt;a href=&#34;https://arxiv.org/abs/1906.01615&#34; target=&#34;_blank&#34;&gt;Merrill (2019)&lt;/a&gt; formalized the notion of a saturated network (a finite-precision approximation of a continuous RNN) and related the capacity of different saturated RNNs to different classes of formal languages. &lt;a href=&#34;https://arxiv.org/abs/1808.09357&#34; target=&#34;_blank&#34;&gt;Peng et al. (2019)&lt;/a&gt; explored RNN capacity along a different axis: whether or not their internal computation can be simulated by a weighted finite state machine (WFA).&lt;/p&gt;
+
+&lt;p&gt;The goal of this paper is to unify these independent threads of research by further exploring the connection between formal models like saturated RNNs, CMs, and WFAs. We place all of these models into a two dimensional hierarchy defined by two formal properties: rational recurrence and space complexity. As defined by &lt;a href=&#34;https://arxiv.org/abs/1808.09357&#34; target=&#34;_blank&#34;&gt;Peng et al. (2019)&lt;/a&gt;, an RNN is &lt;em&gt;rationally recurrent&lt;/em&gt; if its recurrent state can be computed by a WFA. Space complexity, related to the concept in analysis of algorithms, measures how much memory is available to an RNN.&lt;/p&gt;
+
+&lt;p&gt;We present new results placing architectures into this hierarchy. For example, we prove the saturated LSTM is not rationally recurrent, which was previously an open question. We also show that general CMs are not rationall recurrent. However, we explore restricted classes of counter machines that are. While the main focus of the paper is on RNNs, we also present results analyzing memory networks and &lt;strong&gt;transformers&lt;/strong&gt; in the same terms.&lt;/p&gt;
+
+&lt;p&gt;Once we have derived these characterizations, we use them to demonstrate functions and languages that formally separate the capacities of different architectures. For example, we prove that the QRNN with a one-layer pooler cannot recognize $a^nb^n$, whereas the LSTM can. Let $D_k$ denote the capacity of an RNN with a $k$-layer pooler, and let s-$X$ denote the saturated version of architecture $X$. Here are some of the other results in this vein, stated more formally:&lt;/p&gt;
+
+&lt;p&gt;$$ a^nb^n \in D_1(\textrm{\normalfont WFA}) $$
+$$ a^nb^n \in D_1(\textrm{\normalfont s-LSTM}) $$
+$$ a^nb^n \not\in D_1(\textrm{\normalfont s-QRNN}) $$
+$$ a^nb^n \in D_1(\textrm{\normalfont s-QRNN $\circ$ s-QRNN}) $$
+$$ a^nb^n \in D_2(\textrm{\normalfont s-QRNN}) $$
+$$ a^nb^n\Sigma^* \in D_1(\textrm{\normalfont s-LSTM}) $$
+$$ a^nb^n\Sigma^* \not\in D(\textrm{\normalfont s-QRNN}) $$
+$$ a^nb^n\Sigma^* \cup { \epsilon } \in D_1(\textrm{\normalfont s-QRNN $\circ$ s-QRNN}) $$&lt;/p&gt;
+
+&lt;p&gt;Finally, we run experiments testing whether unsaturated networks trained by gradient descent can learn these languages. In ever case, we find that the capacity of the saturated networks correctly predicts the outcome of the experiments.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Theory of Saturated Neural Networks</title>
@@ -712,7 +743,7 @@ The mother bears a daughter.&lt;/p&gt;
     <item>
       <title></title>
       <link>http://lambdaviking.com/authors/admin/</link>
-      <pubDate>Sat, 26 Oct 2019 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 16 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>http://lambdaviking.com/authors/admin/</guid>
       <description>&lt;p&gt;I am a researcher advised by &lt;a href=&#34;https://homes.cs.washington.edu/~nasmith/&#34;&gt;Noah Smith&lt;/a&gt;, &lt;a href=&#34;https://www.cs.bgu.ac.il/~yoavg/uni/&#34;&gt;Yoav Goldberg&lt;/a&gt;, and &lt;a href=&#34;https://roys174.github.io//&#34;&gt;Roy Schwartz&lt;/a&gt; on the &lt;a href=&#34;https://allennlp.org/&#34;&gt;AllenNLP&lt;/a&gt; team at &lt;a href=&#34;https://allenai.org/&#34;&gt;AI2&lt;/a&gt;. I recently graduated from Yale, where I worked with &lt;a href=&#34;http://clay.yale.edu/&#34;&gt;CLAY&lt;/a&gt; and my &lt;a href=&#34;http://lambdaviking.com/publication/sequential-neural-networks-as-automata/&#34;&gt;thesis&lt;/a&gt; was advised by &lt;a href=&#34;https://bobfrank1.github.io/&#34;&gt;Bob Frank&lt;/a&gt; and &lt;a href=&#34;https://cpsc.yale.edu/people/dana-angluin&#34;&gt;Dana Angluin&lt;/a&gt;.&lt;/p&gt;
