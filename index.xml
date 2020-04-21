@@ -115,7 +115,7 @@
       <guid>http://lambdaviking.com/post/rr-hierarchy/</guid>
       <description>
 
-&lt;p&gt;This post is about &lt;em&gt;A Formal Hierarchy of RNN Architectures&lt;/em&gt;, which was joint work between myself, Gail Weiss, Yoav Goldberg, Roy Schwartz, Noah Smith, and Eran Yahav. Compared to the original paper, this post is more of a summary, and will attempt to explain the significance of the results assuming less familiarity with formal language theory.&lt;/p&gt;
+&lt;p&gt;This post is about &lt;a href=&#34;https://arxiv.org/abs/2004.08500&#34; target=&#34;_blank&#34;&gt;&lt;em&gt;A Formal Hierarchy of RNN Architectures&lt;/em&gt;&lt;/a&gt;, which was joint work between myself, Gail Weiss, Yoav Goldberg, Roy Schwartz, Noah Smith, and Eran Yahav. Compared to the original paper, this post is more of a summary, and will attempt to explain the significance of the results assuming less familiarity with formal language theory.&lt;/p&gt;
 
 &lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;
 
