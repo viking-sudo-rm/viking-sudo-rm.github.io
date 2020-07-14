@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Rodney Kinney on Will Merrill</title>
+    <link>http://lambdaviking.com/authors/rodney-kinney/</link>
+    <description>Recent content in Rodney Kinney on Will Merrill</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 06 Jul 2020 00:00:00 +0000</lastBuildDate>
+    
+	    <atom:link href="http://lambdaviking.com/authors/rodney-kinney/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>CORD-19: The COVID-19 Open Research Dataset</title>
+      <link>http://lambdaviking.com/publication/cord19-the-covid-19-open-research-dataset/</link>
+      <pubDate>Mon, 06 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://lambdaviking.com/publication/cord19-the-covid-19-open-research-dataset/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

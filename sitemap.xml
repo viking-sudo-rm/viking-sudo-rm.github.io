@@ -30,52 +30,251 @@
   <url>
     <loc>http://lambdaviking.com/</loc>
     <lastmod>2030-06-01T13:00:00+00:00</lastmod>
-    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://lambdaviking.com/misc/</loc>
+    <lastmod>2020-07-13T00:00:00+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://lambdaviking.com/authors/admin/</loc>
-    <lastmod>2019-08-06T00:00:00+00:00</lastmod>
+    <lastmod>2020-07-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://lambdaviking.com/publication_types/1/</loc>
+    <lastmod>2020-07-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://lambdaviking.com/publication_types/7/</loc>
+    <lastmod>2020-07-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://lambdaviking.com/publication/a-formal-hierarchy-of-rnn-architectures/</loc>
+    <lastmod>2020-07-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://lambdaviking.com/authors/alex-wade/</loc>
+    <lastmod>2020-07-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://lambdaviking.com/authors/</loc>
-    <lastmod>2019-08-06T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <lastmod>2020-07-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://lambdaviking.com/authors/boya-xie/</loc>
+    <lastmod>2020-07-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://lambdaviking.com/authors/brandon-stilson/</loc>
+    <lastmod>2020-07-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://lambdaviking.com/authors/chris-wilhelm/</loc>
+    <lastmod>2020-07-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://lambdaviking.com/publication/cord19-the-covid-19-open-research-dataset/</loc>
+    <lastmod>2020-07-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://lambdaviking.com/authors/daniel-s.-weld/</loc>
+    <lastmod>2020-07-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://lambdaviking.com/authors/darrin-eide/</loc>
+    <lastmod>2020-07-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://lambdaviking.com/authors/devvret-rishi/</loc>
+    <lastmod>2020-07-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://lambdaviking.com/authors/dewey-murdick/</loc>
+    <lastmod>2020-07-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://lambdaviking.com/authors/doug-burdick/</loc>
+    <lastmod>2020-07-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://lambdaviking.com/authors/douglas-raymond/</loc>
+    <lastmod>2020-07-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://lambdaviking.com/authors/eran-yahav/</loc>
+    <lastmod>2020-07-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://lambdaviking.com/authors/gail-weiss/</loc>
+    <lastmod>2020-07-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://lambdaviking.com/authors/jerry-sheehan/</loc>
+    <lastmod>2020-07-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://lambdaviking.com/authors/jiangjiang-yang/</loc>
+    <lastmod>2020-07-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://lambdaviking.com/authors/kathryn-funk/</loc>
+    <lastmod>2020-07-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://lambdaviking.com/authors/kuansan-wang/</loc>
+    <lastmod>2020-07-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://lambdaviking.com/authors/kyle-lo/</loc>
+    <lastmod>2020-07-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://lambdaviking.com/authors/lucy-lu-wang/</loc>
+    <lastmod>2020-07-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://lambdaviking.com/authors/nancy-xin-ru-wang/</loc>
+    <lastmod>2020-07-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://lambdaviking.com/authors/noah-a.-smith/</loc>
+    <lastmod>2020-07-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://lambdaviking.com/authors/oren-etzioni/</loc>
+    <lastmod>2020-07-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://lambdaviking.com/authors/paul-mooney/</loc>
+    <lastmod>2020-07-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://lambdaviking.com/publication_types/</loc>
+    <lastmod>2020-07-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://lambdaviking.com/publication/</loc>
+    <lastmod>2020-07-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://lambdaviking.com/authors/rodney-kinney/</loc>
+    <lastmod>2020-07-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://lambdaviking.com/authors/roy-schwartz/</loc>
+    <lastmod>2020-07-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://lambdaviking.com/authors/russell-reas/</loc>
+    <lastmod>2020-07-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://lambdaviking.com/authors/sebastian-kohlmeier/</loc>
+    <lastmod>2020-07-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://lambdaviking.com/tags/source-themes/</loc>
+    <lastmod>2020-07-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://lambdaviking.com/tags/</loc>
+    <lastmod>2020-07-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://lambdaviking.com/authors/yannis-katsis/</loc>
+    <lastmod>2020-07-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://lambdaviking.com/authors/yoav-goldberg/</loc>
+    <lastmod>2020-07-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://lambdaviking.com/authors/yoganand-chandrasekhar/</loc>
+    <lastmod>2020-07-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://lambdaviking.com/authors/yunyao-li/</loc>
+    <lastmod>2020-07-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://lambdaviking.com/authors/zhihong-shen/</loc>
+    <lastmod>2020-07-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://lambdaviking.com/authors/ziyang-liu/</loc>
+    <lastmod>2020-07-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://lambdaviking.com/post/rr-hierarchy/</loc>
+    <lastmod>2020-04-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://lambdaviking.com/categories/</loc>
-    <lastmod>2019-08-06T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <lastmod>2020-04-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://lambdaviking.com/categories/nlp/</loc>
-    <lastmod>2019-08-06T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <lastmod>2020-04-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://lambdaviking.com/post/</loc>
-    <lastmod>2019-08-06T00:00:00+00:00</lastmod>
+    <lastmod>2020-04-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://lambdaviking.com/post/saturated-networks/</loc>
+    <lastmod>2019-10-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://lambdaviking.com/post/the-state-of-interpretability-in-nlp/</loc>
     <lastmod>2019-08-06T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://lambdaviking.com/publication_types/1/</loc>
-    <lastmod>2019-08-02T00:02:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://lambdaviking.com/publication_types/3/</loc>
-    <lastmod>2019-08-02T00:02:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -86,36 +285,11 @@
   <url>
     <loc>http://lambdaviking.com/authors/gigi-felice-stark/</loc>
     <lastmod>2019-08-02T00:02:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://lambdaviking.com/publication_types/</loc>
-    <lastmod>2019-08-02T00:02:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://lambdaviking.com/publication/</loc>
-    <lastmod>2019-08-02T00:02:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://lambdaviking.com/authors/robert-frank/</loc>
     <lastmod>2019-08-02T00:02:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://lambdaviking.com/tags/source-themes/</loc>
-    <lastmod>2019-08-02T00:02:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://lambdaviking.com/tags/</loc>
-    <lastmod>2019-08-02T00:02:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -131,31 +305,26 @@
   <url>
     <loc>http://lambdaviking.com/authors/lenny-khazan/</loc>
     <lastmod>2019-08-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>http://lambdaviking.com/authors/noah-amsel/</loc>
     <lastmod>2019-08-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>http://lambdaviking.com/authors/simon-mendelsohn/</loc>
     <lastmod>2019-08-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>http://lambdaviking.com/authors/yiding-hao/</loc>
     <lastmod>2019-08-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>http://lambdaviking.com/categories/old-english/</loc>
     <lastmod>2019-07-13T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -166,13 +335,11 @@
   <url>
     <loc>http://lambdaviking.com/categories/translation/</loc>
     <lastmod>2019-07-13T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>http://lambdaviking.com/slides/</loc>
     <lastmod>2019-02-05T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -188,7 +355,6 @@
   <url>
     <loc>http://lambdaviking.com/authors/andrew-benz/</loc>
     <lastmod>2018-10-30T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -199,7 +365,6 @@
   <url>
     <loc>http://lambdaviking.com/authors/dana-angluin/</loc>
     <lastmod>2018-10-30T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -210,7 +375,6 @@
   <url>
     <loc>http://lambdaviking.com/tags/voynich/</loc>
     <lastmod>2018-09-25T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -226,13 +390,11 @@
   <url>
     <loc>http://lambdaviking.com/tags/mythology/</loc>
     <lastmod>2018-07-05T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>http://lambdaviking.com/categories/old-norse/</loc>
     <lastmod>2018-07-05T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -243,19 +405,21 @@
   <url>
     <loc>http://lambdaviking.com/authors/jungo-kasai/</loc>
     <lastmod>2018-06-06T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>http://lambdaviking.com/authors/owen-rambow/</loc>
     <lastmod>2018-06-06T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>http://lambdaviking.com/authors/pauli-xu/</loc>
     <lastmod>2018-06-06T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://lambdaviking.com/publication/sense-abstraction/</loc>
+    <lastmod>2018-03-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -266,13 +430,11 @@
   <url>
     <loc>http://lambdaviking.com/tags/deep-learning/</loc>
     <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>http://lambdaviking.com/tags/demo/</loc>
     <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -288,7 +450,6 @@
   <url>
     <loc>http://lambdaviking.com/project/</loc>
     <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>

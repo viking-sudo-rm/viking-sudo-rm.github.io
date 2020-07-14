@@ -211,7 +211,7 @@
         
 
         <li class="nav-item">
-          <a class="nav-link " href="/#about"><span>Home</span></a>
+          <a class="nav-link " href="/#about"><span>About</span></a>
         </li>
 
         
@@ -270,6 +270,28 @@
 
         <li class="nav-item">
           <a class="nav-link " href="/#posts"><span>Blog</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/misc/"><span>Misc</span></a>
         </li>
 
         
@@ -560,13 +582,13 @@
 
 <p>An alternate approach to the same problem is RSA, which is not to be confused with the cryptographic protocol of the same name. RSA sidesteps the issue with probing by measuring the degree to which two representations are correlated, not whether the information from one can be recovered from the other.</p>
 
-<p>Formally, RSA is a method of computing the similarity between two representational spaces $X$ and $Y$. We assume that we do not have the direct ability to compare $x$ to $y$, but instead have two internally defined similarity measures $d_X(x_1, x_2)$ and $d_Y(y_1, y_2)$. For example, one space could be discrete trees, and the other could be neural network hidden states. Additionally, the distance measures need not be symmetric.</p>
+<p>Formally, RSA is a method of computing the similarity between two representations $X$ and $Y$. We assume that we do not have the direct ability to compare $x$ to $y$, but instead have two internally defined similarity measures $d_X(x_1, x_2)$ and $d_Y(y_1, y_2)$. These measures need not be symmetric.</p>
 
-<p>To perform RSA, we first compute similarity matrices $M(X)$ and $M(Y)$ where</p>
+<p>To get an overall measure of similarity, we compute a similar matrices $M(X)$ and $M(Y)$ where</p>
 
 <p>$$ M(X)_{ij} = d_X(x_i, x_j) $$</p>
 
-<p>and analogously for $Y$. Once we have these matrices, we compute an overall measure of similarity by taking the correlation between them. I find RSA to be a quite exciting method for future research, as it avoids some of the pitfalls of probing while also being very easy (perhaps easier than probing) to implement. This is not to say that probing should be abandoned completely, as being able to verify the same result with different methods increases confidence in a finding. I recall hearing a talk at ACL in which RSA was already applied to transformer representations and replicated probing findings, although I unfortunately cannot find the paper which reported this.</p>
+<p>and analogously for $Y$. Once we have these matrices, we compute an overall measure of similarity by taking the correlation between them. I find RSA to be a quite exciting method for future research, as it avoids some of the pitfalls of probing while also being very easy (perhaps easier than probing) to implement. This is not to say that probing should be abandoned completely, as being able to verify the same results with different methods increases their confidence. I recall hearing a talk at ACL in which RSA was already applied to transformer representations and replicated probing findings, although I unfortunately cannot find the paper which reported this.</p>
 
 <h2 id="conclusion">Conclusion</h2>
 
@@ -647,13 +669,13 @@
   <div class="media author-card" itemscope itemtype="http://schema.org/Person">
     
       
-      <img class="portrait mr-3" src="/authors/admin/avatar_hu964522a25810af4fad3f9d9ff9f6f091_6962788_250x250_fill_q90_lanczos_center.jpg" itemprop="image" alt="Avatar">
+      <img class="portrait mr-3" src="/authors/admin/avatar_hueb6abc417e3f12be8d53ef52fa104d6b_2259797_250x250_fill_q90_lanczos_center.jpg" itemprop="image" alt="Avatar">
     
 
     <div class="media-body">
       <h5 class="card-title" itemprop="name"><a href="http://lambdaviking.com/">Will Merrill</a></h5>
-      <h6 class="card-subtitle">Research Resident</h6>
-      <p class="card-text" itemprop="description">My research interests incorporate computational linguistics, theoretical computer science, and machine learning.</p>
+      <h6 class="card-subtitle">Researcher</h6>
+      <p class="card-text" itemprop="description">NLP, deep learning, and formal language theory</p>
       <ul class="network-icon" aria-hidden="true">
         
           
@@ -809,7 +831,7 @@
     
     
     
-    <script src="/js/academic.min.98ea4faec9c45f666e4a8a91902fa456.js"></script>
+    <script src="/js/academic.min.e96667673477f82d438d0745ca6243dd.js"></script>
 
     
 

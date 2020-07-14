@@ -6,10 +6,154 @@
     <description>Recent content in NLP on Will Merrill</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 06 Aug 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 16 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="http://lambdaviking.com/categories/nlp/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>A Formal Hierarchy of RNN Architectures</title>
+      <link>http://lambdaviking.com/post/rr-hierarchy/</link>
+      <pubDate>Thu, 16 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://lambdaviking.com/post/rr-hierarchy/</guid>
+      <description>
+
+&lt;p&gt;This post is about &lt;a href=&#34;https://arxiv.org/abs/2004.08500&#34; target=&#34;_blank&#34;&gt;&lt;em&gt;A Formal Hierarchy of RNN Architectures&lt;/em&gt;&lt;/a&gt;, which was joint work between myself, Gail Weiss, Yoav Goldberg, Roy Schwartz, Noah Smith, and Eran Yahav. Compared to the original paper, this post is more of a summary, and will attempt to explain the significance of the results assuming less familiarity with formal language theory.&lt;/p&gt;
+
+&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;
+
+&lt;p&gt;Understanding the practical capacity of neural network architectures is an important question for both the design of new architectures and the interpretability of current ones. By &amp;ldquo;practical capacity&amp;rdquo;, we mean the classes of tasks that an architecture can discover solutions to via standard training methods. Since we are mostly interested in NLP here, another way to describe this is the types of grammars that a trained neural network can learn to implement. It has been known since &lt;a href=&#34;https://dl.acm.org/doi/10.1145/130385.130432&#34; target=&#34;_blank&#34;&gt;Siegelmann and Sontag (1992)&lt;/a&gt; that RNNs with infinite time and precision are Turing-complete; however, these unrealistic assumptions make this a bad formal model for practical learnable capacity.&lt;/p&gt;
+
+&lt;p&gt;Over the last year or two, several works have addressed this by relating deep NLP architectures like RNNs to existing formal models in automata theory. &lt;a href=&#34;https://arxiv.org/abs/1805.04908&#34; target=&#34;_blank&#34;&gt;Weiss et al. (2018)&lt;/a&gt; showed a connection between LSTMs and counter machines (CMs), and demonstrated how LSTMs learn to count to solve certain formal tasks that other RNNs cannot solve. Building on this, &lt;a href=&#34;https://arxiv.org/abs/1906.01615&#34; target=&#34;_blank&#34;&gt;Merrill (2019)&lt;/a&gt; formalized the notion of a saturated network (a finite-precision approximation of a continuous RNN) and related the capacity of different saturated RNNs to different classes of formal languages. &lt;a href=&#34;https://arxiv.org/abs/1808.09357&#34; target=&#34;_blank&#34;&gt;Peng et al. (2018)&lt;/a&gt; explored RNN capacity along a different axis: whether or not their internal computation can be simulated by a weighted finite state machine (WFA).&lt;/p&gt;
+
+&lt;h2 id=&#34;the-hierarchy&#34;&gt;The Hierarchy&lt;/h2&gt;
+
+&lt;p&gt;The goal of this paper is to unify these independent threads of research by further exploring the connection between formal models like saturated RNNs, CMs, and WFAs. We place all of these models into a two dimensional hierarchy defined by two formal properties: rational recurrence and space complexity. As defined by &lt;a href=&#34;https://arxiv.org/abs/1808.09357&#34; target=&#34;_blank&#34;&gt;Peng et al. (2019)&lt;/a&gt;, an RNN is &lt;em&gt;rationally recurrent&lt;/em&gt; if its recurrent state can be computed by a WFA. &lt;em&gt;Space complexity&lt;/em&gt;, related to the concept in analysis of algorithms, measures how much memory is available to a model.&lt;/p&gt;
+
+&lt;p&gt;We present new results characterizing models in terms of these properties. For example, we prove the saturated LSTM is not rationally recurrent, which was previously an open question. We also show that general CMs are not rationally recurrent. However, we explore restricted classes of counter machines that are. While the main focus of the paper is on RNNs, we also present results analyzing memory networks and transformers in the same terms. Together, these results provide a hierarchy of RNNS and related models in terms of the functions that their hidden states can express.&lt;/p&gt;
+
+&lt;h2 id=&#34;language-expressiveness&#34;&gt;Language Expressiveness&lt;/h2&gt;
+
+&lt;p&gt;Once we have derived these characterizations, we use them to demonstrate formal languages that separate the capacities of different RNNs. We add a 1 or 2-layer feedforward &amp;ldquo;pooler&amp;rdquo; after the final RNN state and view this full model as a language acceptor. Here are some of the results in this vein, stated more formally. Let $D_k$ denote the capacity of an RNN with a $k$-layer pooler, and let s-$X$ denote the saturated version of architecture $X$.&lt;/p&gt;
+
+&lt;p&gt;$$ a^nb^n \in D_1(\textrm{s-LSTM}) $$
+$$ a^nb^n \not\in D_1(\textrm{s-QRNN}) $$&lt;/p&gt;
+
+&lt;p&gt;The QRNN with a 1-layer pooler cannot recognize $a^nb^n$, whereas the LSTM can.&lt;/p&gt;
+
+&lt;p&gt;$$ a^nb^n \in D_1(\textrm{WFA}) $$&lt;/p&gt;
+
+&lt;p&gt;While the rationally recurrent s-QRNN cannot recognize $a^nb^n$, a WFA actually can! We provide an existence proof using some linear algebra, and then provide a method through which the proof can be extended to construct an example WFA.&lt;/p&gt;
+
+&lt;p&gt;$$ a^nb^n \in D_2(\textrm{s-QRNN}) $$&lt;/p&gt;
+
+&lt;p&gt;Adding a second linear layer (or using two s-QRNN layers) allows us to recognize $a^nb^n$ with an s-QRNN. Does this mean the hierarchy dissolves as the pooler is strengthened?&lt;/p&gt;
+
+&lt;p&gt;$$ a^nb^n\Sigma^* \in D_1(\textrm{s-LSTM}) $$
+$$ a^nb^n\Sigma^* \not\in D(\textrm{s-QRNN}) \; \textrm{for any $D$} $$&lt;/p&gt;
+
+&lt;p&gt;No, the hierarchy persists, even for stronger decoders. We provide a simple extension of $a^nb^n$ that can be recognized by an s-LSTM with a 1-layer pooler, but can never be recognized by an s-QRNN, no matter how many layers the pooler has. We dub the technique used to prove this the &lt;em&gt;suffix attack&lt;/em&gt;. It exploits the fact that the QRNN (compared to the LSTM) is fundamentally unable to detect when its state has reached an accepting configuration&amp;ndash;thus, it cannot &amp;ldquo;stop&amp;rdquo; updating when the strings are padded with an arbitrary suffix. Since this is a general property, it can be directly adapted to other formal languages.&lt;/p&gt;
+
+&lt;h2 id=&#34;experiments&#34;&gt;Experiments&lt;/h2&gt;
+
+&lt;p&gt;Finally, we run experiments testing whether unsaturated networks trained by gradient descent can learn variants of $a^nb^n$ and $a^nb^n\Sigma^*$. In every case, we find that the capacity of the saturated networks correctly predicts the outcome of the experiments. Thus, while our theoretical results largely focus on saturated networks, it seems that they also describe the practical behavior learned by unsaturated ones.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Theory of Saturated Neural Networks</title>
+      <link>http://lambdaviking.com/post/saturated-networks/</link>
+      <pubDate>Sat, 26 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://lambdaviking.com/post/saturated-networks/</guid>
+      <description>
+
+&lt;p&gt;The main idea of my paper &lt;a href=&#34;https://arxiv.org/abs/1906.01615&#34; target=&#34;_blank&#34;&gt;Sequential Neural Networks as Automata&lt;/a&gt; is that, if we making some simplifying assumptions about how neural networks work, we can derive a theory of network expressiveness (what formal languages can different architectures model?) that seems to agree with the classes of formal languages that different networks can learn when trained by gradient descent. Thus, this restricted theoretical capacity seems to be (potentially) a good proxy for the empirical learnable capacity of various networks.&lt;/p&gt;
+
+&lt;h2 id=&#34;saturated-networks&#34;&gt;Saturated Networks&lt;/h2&gt;
+
+&lt;p&gt;In the paper, I referred to the simplified network whose capacity we can analyze as an &lt;em&gt;asymptotic&lt;/em&gt; network. However, after talking with Gail Weiss, I now believe the term &lt;em&gt;saturated&lt;/em&gt; is more descriptive, and plan to use this term going forward.&lt;/p&gt;
+
+&lt;p&gt;A neural network is a function $f(x, \theta)$ that is almost-everywhere differentiable with respect to the parameters $\theta$. Given such a function, we derive the saturated network $f&amp;rsquo;$ as&lt;/p&gt;
+
+&lt;p&gt;$$ f&amp;rsquo;(x, \theta) = \lim_{N \rightarrow \infty} f(x, N\theta) . $$&lt;/p&gt;
+
+&lt;p&gt;We define $f&amp;rsquo;$ over the domain of $(x, \theta)$ for which the limit above exists.&lt;/p&gt;
+
+&lt;p&gt;In a neural network, the effect of this transformation is to discretize all of the activations. For example, consider a neuron:&lt;/p&gt;
+
+&lt;p&gt;$$ \sigma(wx + b) $$&lt;/p&gt;
+
+&lt;p&gt;where $\sigma$ is the sigmoid function. When we take the limit of $\sigma(Nwx + Nb)$, the output of the neuron approaches either $0$ or $1$. This is what I mean by &lt;em&gt;discretization&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;After applying this discretization to the full network, we can analyze the computational capacity of the resulting discrete automaton. We also define a notion of space complexity associated with these saturated networks in the paper. Intuitively, this measure of complexity is just the number of configurations that the saturated network can have after reading a sequence of length $n$. For more details on this, consult &lt;a href=&#34;https://arxiv.org/abs/1906.01615&#34; target=&#34;_blank&#34;&gt;the paper&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;summary-of-results&#34;&gt;Summary of Results&lt;/h2&gt;
+
+&lt;p&gt;By $L(M)$, we denote the set of formal languages that a machine $M$ can accept. Some key capacity results from the paper are as follows:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;$L(\textrm{ConvNet})$ is a proper subset of the regular languages&lt;/li&gt;
+&lt;li&gt;$L(\textrm{RNN})$ is exactly the regular languages&lt;/li&gt;
+&lt;li&gt;$L(\textrm{GRU})$ is exactly the regular languages&lt;/li&gt;
+&lt;li&gt;$L(\textrm{LSTM})$ is a superset of the regular languages, and a subset of the real-time counter languages&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The core results about the configuration complexity, some of which are analogous, are:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;ConvNet has $O(1)$ configurations&lt;/li&gt;
+&lt;li&gt;RNN has $O(1)$ configurations&lt;/li&gt;
+&lt;li&gt;GRU has $O(1)$ configurations&lt;/li&gt;
+&lt;li&gt;LSTM has $O(n^k)$ configurations for hidden size $k$&lt;/li&gt;
+&lt;li&gt;Attention has $2^{O(n)}$ configurations&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/viking-sudo-rm/stacknn-core&#34; target=&#34;_blank&#34;&gt;StackNN&lt;/a&gt; has $2^{O(n)}$ configurations&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;There are some other results about attention/transformers that I&amp;rsquo;m not going to get into here, since they&amp;rsquo;re not so neat. If you&amp;rsquo;re interested though, I refer you to Section 4 of &lt;a href=&#34;https://arxiv.org/abs/1906.01615&#34; target=&#34;_blank&#34;&gt;the paper&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;empirical-evidence&#34;&gt;Empirical Evidence&lt;/h2&gt;
+
+&lt;h3 id=&#34;positive-evidence&#34;&gt;Positive Evidence&lt;/h3&gt;
+
+&lt;p&gt;The development of this theory was motivated by past empirical results about what RNNs are able to learn. Two types of tasks (counting and reversing) serve as relevant diagnostics for assessing the computational power of different architectures.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://arxiv.org/abs/1805.04908&#34; target=&#34;_blank&#34;&gt;Weiss et al.&lt;/a&gt; show that LSTMs can learn to count, whereas RNNs and GRUs do not. Similarly, &lt;a href=&#34;https://arxiv.org/abs/1906.03648&#34; target=&#34;_blank&#34;&gt;Sugzgun et al.&lt;/a&gt; observe that LSTMs can learn the 1-Dyck counter language, whereas other RNNs do not. This is predicted by the theory since saturated LSTMs can do counting, but saturated RNNs and GRUs are finite state.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://arxiv.org/abs/1809.02836&#34; target=&#34;_blank&#34;&gt;Hao et al.&lt;/a&gt; show how stack neural networks can solve the (beyond counter language) task of reversing a string, whereas LSTMs fail badly on this. In my paper, I also showed that attention can solve this task. Both of the results are predicted by the theory, since stack neural networks and attention allow for exponential configurations, which are needed to reverse a string, whereas LSTMs are limited to polynomial configurations.&lt;/p&gt;
+
+&lt;h3 id=&#34;negative-evidence&#34;&gt;Negative Evidence&lt;/h3&gt;
+
+&lt;p&gt;While I found that regularized neural networks display the counting pattern reported by &lt;a href=&#34;https://arxiv.org/abs/1805.04908&#34; target=&#34;_blank&#34;&gt;Weiss et al.&lt;/a&gt;, I also found that the unregularized LSTM, GRU, and RNN can all learn to model the language $a^nb^nc$, which requires counting. Thus, it might be more precise to say that the saturated theory seems to describe the learnable capacity of &lt;em&gt;regularized&lt;/em&gt; networks. One possible interpretation of this is that the constraints imposed by regularization prevent the network from learning strategies beyond the saturated capacity.&lt;/p&gt;
+
+&lt;h2 id=&#34;proof-sketches&#34;&gt;Proof Sketches&lt;/h2&gt;
+
+&lt;h3 id=&#34;rnn-capacity-and-complexity&#34;&gt;RNN Capacity and Complexity&lt;/h3&gt;
+
+&lt;p&gt;To show that $L(\textrm{RNN})$ is the regular languages, we show two directions of containment.&lt;/p&gt;
+
+&lt;p&gt;First, we prove that the the regular languages are an upper bound. We do this by showing that the configuration complexity of the RNN is finite, i.e. $O(1)$. Since each neuron has two possible values ($-1$ and $1$), and there are $k$ neurons in the state, the number of configurations of the state vector is $O(2^k) = O(1)$.&lt;/p&gt;
+
+&lt;p&gt;The other direction is a little more complicated. We need to construct an RNN to simulate an arbitrary finite state machine. A construction for this is provided in Lemma B.1.&lt;/p&gt;
+
+&lt;h3 id=&#34;lstm-capacity-and-complexity&#34;&gt;LSTM Capacity and Complexity&lt;/h3&gt;
+
+&lt;p&gt;In the LSTM case, even when we discretize the network, we get a model with more than finite state. This is because the LSTM&amp;rsquo;s gating architecture is capable of counting (&lt;a href=&#34;https://arxiv.org/abs/1805.04908&#34; target=&#34;_blank&#34;&gt;Weiss et al.&lt;/a&gt;, 2018).&lt;/p&gt;
+
+&lt;p&gt;To show that the counter languages are an upper bound, we write the saturated gate network for a particular counter state neuron $c$ as follows:&lt;/p&gt;
+
+&lt;!-- For some reason, the normal \lim_ is not working here. Neither does f_tc_{t-1}. I guess --&gt;
+
+&lt;p&gt;$$ \underset{N \rightarrow \infty}{\lim} c_t $$&lt;/p&gt;
+
+&lt;p&gt;$$ = \underset{N \rightarrow \infty}{\lim} fc_{t-1} + i{\tilde c}_t $$&lt;/p&gt;
+
+&lt;p&gt;$$ = \underset{N \rightarrow \infty}{\lim} ac_{t-1} + b $$&lt;/p&gt;
+
+&lt;p&gt;where $a$ is $0$ or $1$ and $b$ is $-1$, $0$, or $1$. This equation parameterizes a real-time counter machine update. Thus, the counter languages are an upper bound on the saturated LSTM capacity.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>The State of Interpretability in NLP</title>
@@ -41,13 +185,13 @@
 
 &lt;p&gt;An alternate approach to the same problem is RSA, which is not to be confused with the cryptographic protocol of the same name. RSA sidesteps the issue with probing by measuring the degree to which two representations are correlated, not whether the information from one can be recovered from the other.&lt;/p&gt;
 
-&lt;p&gt;Formally, RSA is a method of computing the similarity between two representational spaces $X$ and $Y$. We assume that we do not have the direct ability to compare $x$ to $y$, but instead have two internally defined similarity measures $d_X(x_1, x_2)$ and $d_Y(y_1, y_2)$. For example, one space could be discrete trees, and the other could be neural network hidden states. Additionally, the distance measures need not be symmetric.&lt;/p&gt;
+&lt;p&gt;Formally, RSA is a method of computing the similarity between two representations $X$ and $Y$. We assume that we do not have the direct ability to compare $x$ to $y$, but instead have two internally defined similarity measures $d_X(x_1, x_2)$ and $d_Y(y_1, y_2)$. These measures need not be symmetric.&lt;/p&gt;
 
-&lt;p&gt;To perform RSA, we first compute similarity matrices $M(X)$ and $M(Y)$ where&lt;/p&gt;
+&lt;p&gt;To get an overall measure of similarity, we compute a similar matrices $M(X)$ and $M(Y)$ where&lt;/p&gt;
 
 &lt;p&gt;$$ M(X)_{ij} = d_X(x_i, x_j) $$&lt;/p&gt;
 
-&lt;p&gt;and analogously for $Y$. Once we have these matrices, we compute an overall measure of similarity by taking the correlation between them. I find RSA to be a quite exciting method for future research, as it avoids some of the pitfalls of probing while also being very easy (perhaps easier than probing) to implement. This is not to say that probing should be abandoned completely, as being able to verify the same result with different methods increases confidence in a finding. I recall hearing a talk at ACL in which RSA was already applied to transformer representations and replicated probing findings, although I unfortunately cannot find the paper which reported this.&lt;/p&gt;
+&lt;p&gt;and analogously for $Y$. Once we have these matrices, we compute an overall measure of similarity by taking the correlation between them. I find RSA to be a quite exciting method for future research, as it avoids some of the pitfalls of probing while also being very easy (perhaps easier than probing) to implement. This is not to say that probing should be abandoned completely, as being able to verify the same results with different methods increases their confidence. I recall hearing a talk at ACL in which RSA was already applied to transformer representations and replicated probing findings, although I unfortunately cannot find the paper which reported this.&lt;/p&gt;
 
 &lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
 
