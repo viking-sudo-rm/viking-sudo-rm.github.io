@@ -27,7 +27,11 @@
 
 &lt;p&gt;Over the last year or two, several works have addressed this by relating deep NLP architectures like RNNs to existing formal models in automata theory. &lt;a href=&#34;https://arxiv.org/abs/1805.04908&#34; target=&#34;_blank&#34;&gt;Weiss et al. (2018)&lt;/a&gt; showed a connection between LSTMs and counter machines (CMs), and demonstrated how LSTMs learn to count to solve certain formal tasks that other RNNs cannot solve. Building on this, &lt;a href=&#34;https://arxiv.org/abs/1906.01615&#34; target=&#34;_blank&#34;&gt;Merrill (2019)&lt;/a&gt; formalized the notion of a saturated network (a finite-precision approximation of a continuous RNN) and related the capacity of different saturated RNNs to different classes of formal languages. &lt;a href=&#34;https://arxiv.org/abs/1808.09357&#34; target=&#34;_blank&#34;&gt;Peng et al. (2018)&lt;/a&gt; explored RNN capacity along a different axis: whether or not their internal computation can be simulated by a weighted finite state machine (WFA).&lt;/p&gt;
 
+<<<<<<< HEAD
 &lt;h2 id=&#34;the-hierarchy&#34;&gt;The Hierarchy&lt;/h2&gt;
+=======
+&lt;h3 id=&#34;the-hierarchy&#34;&gt;The Hierarchy&lt;/h3&gt;
+>>>>>>> 8d2af2a27439710173a02b040f73b2b34f102bc2
 
 &lt;p&gt;The goal of this paper is to unify these independent threads of research by further exploring the connection between formal models like saturated RNNs, CMs, and WFAs. We place all of these models into a two dimensional hierarchy defined by two formal properties: rational recurrence and space complexity. As defined by &lt;a href=&#34;https://arxiv.org/abs/1808.09357&#34; target=&#34;_blank&#34;&gt;Peng et al. (2019)&lt;/a&gt;, an RNN is &lt;em&gt;rationally recurrent&lt;/em&gt; if its recurrent state can be computed by a WFA. &lt;em&gt;Space complexity&lt;/em&gt;, related to the concept in analysis of algorithms, measures how much memory is available to a model.&lt;/p&gt;
 

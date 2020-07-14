@@ -6,12 +6,17 @@
     <description>Recent content in 7 on Will Merrill</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
+<<<<<<< HEAD
     <lastBuildDate>Mon, 06 Jul 2020 00:00:00 +0000</lastBuildDate>
+=======
+    <lastBuildDate>Fri, 02 Aug 2019 00:00:00 +0000</lastBuildDate>
+>>>>>>> 8d2af2a27439710173a02b040f73b2b34f102bc2
     
 	    <atom:link href="http://lambdaviking.com/publication_types/7/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+<<<<<<< HEAD
       <title>CORD-19: The COVID-19 Open Research Dataset</title>
       <link>http://lambdaviking.com/publication/cord19-the-covid-19-open-research-dataset/</link>
       <pubDate>Mon, 06 Jul 2020 00:00:00 +0000</pubDate>
@@ -21,6 +26,8 @@
     </item>
     
     <item>
+=======
+>>>>>>> 8d2af2a27439710173a02b040f73b2b34f102bc2
       <title>Sequential Neural Networks as Automata</title>
       <link>http://lambdaviking.com/publication/sequential-neural-networks-as-automata/</link>
       <pubDate>Fri, 02 Aug 2019 00:00:00 +0000</pubDate>

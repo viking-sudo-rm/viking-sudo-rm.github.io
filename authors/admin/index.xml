@@ -6,13 +6,18 @@
     <description>Recent content on Will Merrill</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
+<<<<<<< HEAD
     <lastBuildDate>Mon, 06 Jul 2020 00:00:00 +0000</lastBuildDate>
+=======
+    <lastBuildDate>Thu, 16 Apr 2020 00:00:00 +0000</lastBuildDate>
+>>>>>>> 8d2af2a27439710173a02b040f73b2b34f102bc2
     
 	    <atom:link href="http://lambdaviking.com/authors/admin/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>A Formal Hierarchy of RNN Architectures</title>
+<<<<<<< HEAD
       <link>http://lambdaviking.com/publication/a-formal-hierarchy-of-rnn-architectures/</link>
       <pubDate>Mon, 06 Jul 2020 00:00:00 +0000</pubDate>
       
@@ -31,6 +36,8 @@
     
     <item>
       <title>A Formal Hierarchy of RNN Architectures</title>
+=======
+>>>>>>> 8d2af2a27439710173a02b040f73b2b34f102bc2
       <link>http://lambdaviking.com/post/rr-hierarchy/</link>
       <pubDate>Thu, 16 Apr 2020 00:00:00 +0000</pubDate>
       
@@ -45,7 +52,11 @@
 
 &lt;p&gt;Over the last year or two, several works have addressed this by relating deep NLP architectures like RNNs to existing formal models in automata theory. &lt;a href=&#34;https://arxiv.org/abs/1805.04908&#34; target=&#34;_blank&#34;&gt;Weiss et al. (2018)&lt;/a&gt; showed a connection between LSTMs and counter machines (CMs), and demonstrated how LSTMs learn to count to solve certain formal tasks that other RNNs cannot solve. Building on this, &lt;a href=&#34;https://arxiv.org/abs/1906.01615&#34; target=&#34;_blank&#34;&gt;Merrill (2019)&lt;/a&gt; formalized the notion of a saturated network (a finite-precision approximation of a continuous RNN) and related the capacity of different saturated RNNs to different classes of formal languages. &lt;a href=&#34;https://arxiv.org/abs/1808.09357&#34; target=&#34;_blank&#34;&gt;Peng et al. (2018)&lt;/a&gt; explored RNN capacity along a different axis: whether or not their internal computation can be simulated by a weighted finite state machine (WFA).&lt;/p&gt;
 
+<<<<<<< HEAD
 &lt;h2 id=&#34;the-hierarchy&#34;&gt;The Hierarchy&lt;/h2&gt;
+=======
+&lt;h3 id=&#34;the-hierarchy&#34;&gt;The Hierarchy&lt;/h3&gt;
+>>>>>>> 8d2af2a27439710173a02b040f73b2b34f102bc2
 
 &lt;p&gt;The goal of this paper is to unify these independent threads of research by further exploring the connection between formal models like saturated RNNs, CMs, and WFAs. We place all of these models into a two dimensional hierarchy defined by two formal properties: rational recurrence and space complexity. As defined by &lt;a href=&#34;https://arxiv.org/abs/1808.09357&#34; target=&#34;_blank&#34;&gt;Peng et al. (2019)&lt;/a&gt;, an RNN is &lt;em&gt;rationally recurrent&lt;/em&gt; if its recurrent state can be computed by a WFA. &lt;em&gt;Space complexity&lt;/em&gt;, related to the concept in analysis of algorithms, measures how much memory is available to a model.&lt;/p&gt;
 
@@ -777,5 +788,20 @@ The mother bears a daughter.&lt;/p&gt;
 </description>
     </item>
     
+<<<<<<< HEAD
+=======
+    <item>
+      <title></title>
+      <link>http://lambdaviking.com/authors/admin/</link>
+      <pubDate>Thu, 16 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://lambdaviking.com/authors/admin/</guid>
+      <description>&lt;p&gt;I am a researcher advised by &lt;a href=&#34;https://homes.cs.washington.edu/~nasmith/&#34;&gt;Noah Smith&lt;/a&gt;, &lt;a href=&#34;https://www.cs.bgu.ac.il/~yoavg/uni/&#34;&gt;Yoav Goldberg&lt;/a&gt;, and &lt;a href=&#34;https://roys174.github.io//&#34;&gt;Roy Schwartz&lt;/a&gt; on the &lt;a href=&#34;https://allennlp.org/&#34;&gt;AllenNLP&lt;/a&gt; team at &lt;a href=&#34;https://allenai.org/&#34;&gt;AI2&lt;/a&gt;. I recently graduated from Yale, where I worked with &lt;a href=&#34;http://clay.yale.edu/&#34;&gt;CLAY&lt;/a&gt; and my &lt;a href=&#34;http://lambdaviking.com/publication/sequential-neural-networks-as-automata/&#34;&gt;thesis&lt;/a&gt; was advised by &lt;a href=&#34;https://bobfrank1.github.io/&#34;&gt;Bob Frank&lt;/a&gt; and &lt;a href=&#34;https://cpsc.yale.edu/people/dana-angluin&#34;&gt;Dana Angluin&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;My research interests lie at the intersection of language and computation—spanning NLP, linguistics, and formal language theory. In particular, my recent work has developed theory for understanding NLP deep learning models. I am interested in how AI systems represent the compositional structure and meaning of language, and how we can improve current representations to enable deeper language understanding.&lt;/p&gt;
+</description>
+    </item>
+    
+>>>>>>> 8d2af2a27439710173a02b040f73b2b34f102bc2
   </channel>
 </rss>
