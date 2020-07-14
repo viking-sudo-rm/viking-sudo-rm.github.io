@@ -39,7 +39,6 @@
   
   <url>
     <loc>http://lambdaviking.com/authors/admin/</loc>
-<<<<<<< HEAD
     <lastmod>2020-07-06T00:00:00+00:00</lastmod>
   </url>
   
@@ -61,19 +60,10 @@
   <url>
     <loc>http://lambdaviking.com/authors/alex-wade/</loc>
     <lastmod>2020-07-06T00:00:00+00:00</lastmod>
-=======
-    <lastmod>2020-04-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://lambdaviking.com/post/rr-hierarchy/</loc>
-    <lastmod>2020-04-16T00:00:00+00:00</lastmod>
->>>>>>> 8d2af2a27439710173a02b040f73b2b34f102bc2
   </url>
   
   <url>
     <loc>http://lambdaviking.com/authors/</loc>
-<<<<<<< HEAD
     <lastmod>2020-07-06T00:00:00+00:00</lastmod>
   </url>
   
@@ -105,43 +95,6 @@
   <url>
     <loc>http://lambdaviking.com/authors/darrin-eide/</loc>
     <lastmod>2020-07-06T00:00:00+00:00</lastmod>
-=======
-    <lastmod>2020-04-16T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://lambdaviking.com/categories/</loc>
-    <lastmod>2020-04-16T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://lambdaviking.com/categories/nlp/</loc>
-    <lastmod>2020-04-16T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://lambdaviking.com/post/</loc>
-    <lastmod>2020-04-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://lambdaviking.com/post/saturated-networks/</loc>
-    <lastmod>2019-10-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://lambdaviking.com/post/the-state-of-interpretability-in-nlp/</loc>
-    <lastmod>2019-08-06T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://lambdaviking.com/publication_types/1/</loc>
-    <lastmod>2019-08-02T00:02:00+00:00</lastmod>
-    <priority>0</priority>
->>>>>>> 8d2af2a27439710173a02b040f73b2b34f102bc2
   </url>
   
   <url>
@@ -340,12 +293,6 @@
   </url>
   
   <url>
-    <loc>http://lambdaviking.com/publication_types/7/</loc>
-    <lastmod>2019-08-02T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>http://lambdaviking.com/publication/sequential-neural-networks-as-automata/</loc>
     <lastmod>2019-08-02T00:00:00+00:00</lastmod>
   </url>
@@ -468,11 +415,6 @@
   <url>
     <loc>http://lambdaviking.com/authors/pauli-xu/</loc>
     <lastmod>2018-06-06T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://lambdaviking.com/publication/sense-abstraction/</loc>
-    <lastmod>2018-03-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
