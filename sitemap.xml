@@ -48,11 +48,6 @@
   </url>
   
   <url>
-    <loc>http://lambdaviking.com/publication_types/7/</loc>
-    <lastmod>2020-07-06T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://lambdaviking.com/publication/a-formal-hierarchy-of-rnn-architectures/</loc>
     <lastmod>2020-07-06T00:00:00+00:00</lastmod>
   </url>
@@ -290,6 +285,11 @@
   <url>
     <loc>http://lambdaviking.com/authors/robert-frank/</loc>
     <lastmod>2019-08-02T00:02:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://lambdaviking.com/publication_types/7/</loc>
+    <lastmod>2019-08-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
