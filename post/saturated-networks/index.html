@@ -579,7 +579,7 @@
 <h3 id="lstm-capacity-and-complexity">LSTM Capacity and Complexity</h3>
 <p>In the LSTM case, even when we discretize the network, we get a model with more than finite state. This is because the LSTM&rsquo;s gating architecture is capable of counting (<a href="https://arxiv.org/abs/1805.04908">Weiss et al.</a>, 2018).</p>
 <p>To show that the counter languages are an upper bound, we write the saturated gate network for a particular counter state neuron $c$ as follows:</p>
-<!-- raw HTML omitted -->
+<!-- For some reason, the normal \lim_ is not working here. Neither does f_tc_{t-1}. I guess -->
 <p>$$ \underset{N \rightarrow \infty}{\lim} c_t $$</p>
 <p>$$ = \underset{N \rightarrow \infty}{\lim} fc_{t-1} + i{\tilde c}_t $$</p>
 <p>$$ = \underset{N \rightarrow \infty}{\lim} ac_{t-1} + b $$</p>
