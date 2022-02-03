@@ -84,7 +84,7 @@
   
   
   
-  <link rel="stylesheet" href="/css/academic.min.bf83fa001620b9cbda26937df48ca611.css">
+  <link rel="stylesheet" href="/css/academic.min.59ccb3ff09d95ecf7bfcaeb56fa66975.css">
 
   
 
@@ -548,7 +548,7 @@
 
 <div class="article-header article-container featured-image-wrapper mt-4 mb-4" style="max-width: 720px; max-height: 405px;">
   <div style="position: relative">
-    <img src="/post/saturated-networks/featured_hu03ae2230db0dcae201d860308045520f_36396_720x0_resize_lanczos_2.png" alt="" class="featured-image">
+    <img src="/post/saturated-networks/featured_hu03ae2230db0dcae201d860308045520f_36396_720x0_resize_lanczos_3.png" alt="" class="featured-image">
     
   </div>
 </div>
@@ -558,90 +558,53 @@
   <div class="article-container">
 
     <div class="article-style" itemprop="articleBody">
-      
-
-<p>The main idea of my paper <a href="https://arxiv.org/abs/1906.01615" target="_blank">Sequential Neural Networks as Automata</a> is that, if we making some simplifying assumptions about how neural networks work, we can derive a theory of network expressiveness (what formal languages can different architectures model?) that seems to agree with the classes of formal languages that different networks can learn when trained by gradient descent. Thus, this restricted theoretical capacity seems to be (potentially) a good proxy for the empirical learnable capacity of various networks.</p>
-
+      <p>The main idea of my paper <a href="https://arxiv.org/abs/1906.01615">Sequential Neural Networks as Automata</a> is that, if we making some simplifying assumptions about how neural networks work, we can derive a theory of network expressiveness (what formal languages can different architectures model?) that seems to agree with the classes of formal languages that different networks can learn when trained by gradient descent. Thus, this restricted theoretical capacity seems to be (potentially) a good proxy for the empirical learnable capacity of various networks.</p>
 <h2 id="saturated-networks">Saturated Networks</h2>
-
 <p>In the paper, I referred to the simplified network whose capacity we can analyze as an <em>asymptotic</em> network. However, after talking with Gail Weiss, I now believe the term <em>saturated</em> is more descriptive, and plan to use this term going forward.</p>
-
-<p>A neural network is a function $f(x, \theta)$ that is almost-everywhere differentiable with respect to the parameters $\theta$. Given such a function, we derive the saturated network $f&rsquo;$ as</p>
-
-<p>$$ f&rsquo;(x, \theta) = \lim_{N \rightarrow \infty} f(x, N\theta) . $$</p>
-
-<p>We define $f&rsquo;$ over the domain of $(x, \theta)$ for which the limit above exists.</p>
-
+<p>A neural network is a function $f(x, \theta)$ that is almost-everywhere differentiable with respect to the parameters $\theta$. Given such a function, we derive the saturated network $f'$ as</p>
+<p>$$ f'(x, \theta) = \lim_{N \rightarrow \infty} f(x, N\theta) . $$</p>
+<p>We define $f'$ over the domain of $(x, \theta)$ for which the limit above exists.</p>
 <p>In a neural network, the effect of this transformation is to discretize all of the activations. For example, consider a neuron:</p>
-
 <p>$$ \sigma(wx + b) $$</p>
-
 <p>where $\sigma$ is the sigmoid function. When we take the limit of $\sigma(Nwx + Nb)$, the output of the neuron approaches either $0$ or $1$. This is what I mean by <em>discretization</em>.</p>
-
-<p>After applying this discretization to the full network, we can analyze the computational capacity of the resulting discrete automaton. We also define a notion of space complexity associated with these saturated networks in the paper. Intuitively, this measure of complexity is just the number of configurations that the saturated network can have after reading a sequence of length $n$. For more details on this, consult <a href="https://arxiv.org/abs/1906.01615" target="_blank">the paper</a>.</p>
-
+<p>After applying this discretization to the full network, we can analyze the computational capacity of the resulting discrete automaton. We also define a notion of space complexity associated with these saturated networks in the paper. Intuitively, this measure of complexity is just the number of configurations that the saturated network can have after reading a sequence of length $n$. For more details on this, consult <a href="https://arxiv.org/abs/1906.01615">the paper</a>.</p>
 <h2 id="summary-of-results">Summary of Results</h2>
-
 <p>By $L(M)$, we denote the set of formal languages that a machine $M$ can accept. Some key capacity results from the paper are as follows:</p>
-
 <ul>
 <li>$L(\textrm{ConvNet})$ is a proper subset of the regular languages</li>
 <li>$L(\textrm{RNN})$ is exactly the regular languages</li>
 <li>$L(\textrm{GRU})$ is exactly the regular languages</li>
 <li>$L(\textrm{LSTM})$ is a superset of the regular languages, and a subset of the real-time counter languages</li>
 </ul>
-
 <p>The core results about the configuration complexity, some of which are analogous, are:</p>
-
 <ul>
 <li>ConvNet has $O(1)$ configurations</li>
 <li>RNN has $O(1)$ configurations</li>
 <li>GRU has $O(1)$ configurations</li>
 <li>LSTM has $O(n^k)$ configurations for hidden size $k$</li>
 <li>Attention has $2^{O(n)}$ configurations</li>
-<li><a href="https://github.com/viking-sudo-rm/stacknn-core" target="_blank">StackNN</a> has $2^{O(n)}$ configurations</li>
+<li><a href="https://github.com/viking-sudo-rm/stacknn-core">StackNN</a> has $2^{O(n)}$ configurations</li>
 </ul>
-
-<p>There are some other results about attention/transformers that I&rsquo;m not going to get into here, since they&rsquo;re not so neat. If you&rsquo;re interested though, I refer you to Section 4 of <a href="https://arxiv.org/abs/1906.01615" target="_blank">the paper</a>.</p>
-
+<p>There are some other results about attention/transformers that I&rsquo;m not going to get into here, since they&rsquo;re not so neat. If you&rsquo;re interested though, I refer you to Section 4 of <a href="https://arxiv.org/abs/1906.01615">the paper</a>.</p>
 <h2 id="empirical-evidence">Empirical Evidence</h2>
-
 <h3 id="positive-evidence">Positive Evidence</h3>
-
 <p>The development of this theory was motivated by past empirical results about what RNNs are able to learn. Two types of tasks (counting and reversing) serve as relevant diagnostics for assessing the computational power of different architectures.</p>
-
-<p><a href="https://arxiv.org/abs/1805.04908" target="_blank">Weiss et al.</a> show that LSTMs can learn to count, whereas RNNs and GRUs do not. Similarly, <a href="https://arxiv.org/abs/1906.03648" target="_blank">Sugzgun et al.</a> observe that LSTMs can learn the 1-Dyck counter language, whereas other RNNs do not. This is predicted by the theory since saturated LSTMs can do counting, but saturated RNNs and GRUs are finite state.</p>
-
-<p><a href="https://arxiv.org/abs/1809.02836" target="_blank">Hao et al.</a> show how stack neural networks can solve the (beyond counter language) task of reversing a string, whereas LSTMs fail badly on this. In my paper, I also showed that attention can solve this task. Both of the results are predicted by the theory, since stack neural networks and attention allow for exponential configurations, which are needed to reverse a string, whereas LSTMs are limited to polynomial configurations.</p>
-
+<p><a href="https://arxiv.org/abs/1805.04908">Weiss et al.</a> show that LSTMs can learn to count, whereas RNNs and GRUs do not. Similarly, <a href="https://arxiv.org/abs/1906.03648">Sugzgun et al.</a> observe that LSTMs can learn the 1-Dyck counter language, whereas other RNNs do not. This is predicted by the theory since saturated LSTMs can do counting, but saturated RNNs and GRUs are finite state.</p>
+<p><a href="https://arxiv.org/abs/1809.02836">Hao et al.</a> show how stack neural networks can solve the (beyond counter language) task of reversing a string, whereas LSTMs fail badly on this. In my paper, I also showed that attention can solve this task. Both of the results are predicted by the theory, since stack neural networks and attention allow for exponential configurations, which are needed to reverse a string, whereas LSTMs are limited to polynomial configurations.</p>
 <h3 id="negative-evidence">Negative Evidence</h3>
-
-<p>While I found that regularized neural networks display the counting pattern reported by <a href="https://arxiv.org/abs/1805.04908" target="_blank">Weiss et al.</a>, I also found that the unregularized LSTM, GRU, and RNN can all learn to model the language $a^nb^nc$, which requires counting. Thus, it might be more precise to say that the saturated theory seems to describe the learnable capacity of <em>regularized</em> networks. One possible interpretation of this is that the constraints imposed by regularization prevent the network from learning strategies beyond the saturated capacity.</p>
-
+<p>While I found that regularized neural networks display the counting pattern reported by <a href="https://arxiv.org/abs/1805.04908">Weiss et al.</a>, I also found that the unregularized LSTM, GRU, and RNN can all learn to model the language $a^nb^nc$, which requires counting. Thus, it might be more precise to say that the saturated theory seems to describe the learnable capacity of <em>regularized</em> networks. One possible interpretation of this is that the constraints imposed by regularization prevent the network from learning strategies beyond the saturated capacity.</p>
 <h2 id="proof-sketches">Proof Sketches</h2>
-
 <h3 id="rnn-capacity-and-complexity">RNN Capacity and Complexity</h3>
-
 <p>To show that $L(\textrm{RNN})$ is the regular languages, we show two directions of containment.</p>
-
 <p>First, we prove that the the regular languages are an upper bound. We do this by showing that the configuration complexity of the RNN is finite, i.e. $O(1)$. Since each neuron has two possible values ($-1$ and $1$), and there are $k$ neurons in the state, the number of configurations of the state vector is $O(2^k) = O(1)$.</p>
-
 <p>The other direction is a little more complicated. We need to construct an RNN to simulate an arbitrary finite state machine. A construction for this is provided in Lemma B.1.</p>
-
 <h3 id="lstm-capacity-and-complexity">LSTM Capacity and Complexity</h3>
-
-<p>In the LSTM case, even when we discretize the network, we get a model with more than finite state. This is because the LSTM&rsquo;s gating architecture is capable of counting (<a href="https://arxiv.org/abs/1805.04908" target="_blank">Weiss et al.</a>, 2018).</p>
-
+<p>In the LSTM case, even when we discretize the network, we get a model with more than finite state. This is because the LSTM&rsquo;s gating architecture is capable of counting (<a href="https://arxiv.org/abs/1805.04908">Weiss et al.</a>, 2018).</p>
 <p>To show that the counter languages are an upper bound, we write the saturated gate network for a particular counter state neuron $c$ as follows:</p>
-
-<!-- For some reason, the normal \lim_ is not working here. Neither does f_tc_{t-1}. I guess -->
-
+<!-- raw HTML omitted -->
 <p>$$ \underset{N \rightarrow \infty}{\lim} c_t $$</p>
-
 <p>$$ = \underset{N \rightarrow \infty}{\lim} fc_{t-1} + i{\tilde c}_t $$</p>
-
 <p>$$ = \underset{N \rightarrow \infty}{\lim} ac_{t-1} + b $$</p>
-
 <p>where $a$ is $0$ or $1$ and $b$ is $-1$, $0$, or $1$. This equation parameterizes a real-time counter machine update. Thus, the counter languages are an upper bound on the saturated LSTM capacity.</p>
 
     </div>
@@ -717,6 +680,21 @@
           <li>
             <a itemprop="sameAs" href="http://github.com/viking-sudo-rm" target="_blank" rel="noopener">
               <i class="fab fa-github"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="/files/cv.pdf" >
+              <i class="ai ai-cv"></i>
             </a>
           </li>
         
@@ -841,7 +819,7 @@
     
     
     
-    <script src="/js/academic.min.e96667673477f82d438d0745ca6243dd.js"></script>
+    <script src="/js/academic.min.6247be6eabfb9f422989f37b923b0761.js"></script>
 
     
 
