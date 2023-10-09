@@ -22,7 +22,7 @@ social: false  # includes social icons at the bottom of the page
 
 <p><b>New:</b> Give me <a href="https://www.admonymous.co/lambdaviking">anonymous feedback</a>!</p>
 
-<p>Outside of research, I like exploring NYC by foot and boat, playing basketball and Age of Empires II, and nerding out about dead languages.</p>
+<p>Outside of research, I like exploring New York City by foot and boat, playing basketball and Age of Empires II, and nerding out about dead languages.</p>
 
 <br /> <br />
 
