@@ -15,9 +15,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Theory of Saturated Neural Networks | William  Merrill</title>
+    <title>Translation of the Wanderer | William  Merrill</title>
     <meta name="author" content="William  Merrill">
-    <meta name="description" content="Summarizing &lt;i&gt;Sequential Neural Networks as Automata&lt;/i&gt;">
+    <meta name="description" content="My amateur translation of the Old English poem">
     <meta name="keywords" content="artificial-intelligence, theory-of-computation, deep-learning, language-models">
 
 
@@ -43,7 +43,7 @@
     <link rel="shortcut icon" href="/assets/img/icon.png">
     
     <link rel="stylesheet" href="/assets/css/main.css?d41d8cd98f00b204e9800998ecf8427e">
-    <link rel="canonical" href="http://localhost:4000/blog/2019/theory-of-saturated-neural-networks/">
+    <link rel="canonical" href="http://localhost:4000/blog/2019/wanderer/">
 
     <!-- Dark Mode -->
     
@@ -73,9 +73,9 @@
   <body>
 <d-front-matter>
     <script async type="text/json">{
-      "title": "Theory of Saturated Neural Networks",
-      "description": "Summarizing <i>Sequential Neural Networks as Automata</i>",
-      "published": "September 6, 2019",
+      "title": "Translation of the Wanderer",
+      "description": "My amateur translation of the Old English poem",
+      "published": "July 13, 2019",
       "authors": [
         {
           "author": "William Merrill",
@@ -158,8 +158,8 @@
     <div class="post distill">
 
       <d-title>
-        <h1>Theory of Saturated Neural Networks</h1>
-        <p>Summarizing <i>Sequential Neural Networks as Automata</i></p>
+        <h1>Translation of the Wanderer</h1>
+        <p>My amateur translation of the Old English poem</p>
       </d-title>
 
       <d-byline></d-byline>
@@ -167,90 +167,231 @@
       <d-article>
         
 
-        <p>The main idea of my paper <a href="https://arxiv.org/abs/1906.01615" rel="external nofollow noopener" target="_blank">Sequential Neural Networks as Automata</a> is that, if we making some simplifying assumptions about how neural networks work, we can derive a theory of network expressiveness (what formal languages can different architectures model?) that seems to agree with the classes of formal languages that different networks can learn when trained by gradient descent. Thus, this restricted theoretical capacity seems to be (potentially) a good proxy for the empirical learnable capacity of various networks.</p>
+        <p><em>You can find the original Old English <a href="http://www.anglo-saxons.net/hwaet/?do=get&amp;type=text&amp;id=wdr" rel="external nofollow noopener" target="_blank">here</a>.</em></p>
 
-<h2 id="saturated-networks">Saturated Networks</h2>
+<p>Often the outcast<br>
+awaits his grace,<br>
+the Lord’s mercy,<br>
+though he, sorrow-minded,<br>
+must turn his oars<br>
+along the waters,<br>
+wade the path of exile.<br>
+Fate goes always as it must!</p>
 
-<p>In the paper, I referred to the simplified network whose capacity we can analyze as an <em>asymptotic</em> network. However, after talking with Gail Weiss, I now believe the term <em>saturated</em> is more descriptive, and plan to use this term going forward.</p>
+<p>So spoke the earth-stepper,<br>
+mindful of his misfortunes,<br>
+of wrathful slaughter,<br>
+the death of his comrades:</p>
 
-<p>A neural network is a function $f(x, \theta)$ that is almost-everywhere differentiable with respect to the parameters $\theta$. Given such a function, we derive the saturated network $f’$ as</p>
+<p>Often in the morning,<br>
+I had to discuss<br>
+my every trouble alone.<br>
+There is no one living<br>
+that I dare open my innermost thought to.<br>
+Truly I know<br>
+that it ought to be among men,<br>
+the noble custom,<br>
+where one secures the chest of his spirit,<br>
+hordes his treasure case,<br>
+thinks and speaks freely.<br>
+The weary spirit cannot<br>
+withstand fate,<br>
+nor does the bitter mind<br>
+help do any good.<br>
+So the glory-yearning<br>
+often lock away their dreary<br>
+thoughts in their breast-coffins.<br>
+So I,<br>
+often wretched<br>
+and besorrowed,<br>
+have had to seal away<br>
+my thoughts from kinsmen,<br>
+since, long ago,<br>
+I sealed my lord<br>
+in the darkness of the earth<br>
+and from there travelled<br>
+winter-minded<br>
+over the frozen waves,<br>
+sought, hall-lacking,<br>
+a treasure-giver,<br>
+wherever far or near<br>
+I might find someone<br>
+in the meadhall<br>
+who knew me,<br>
+or was willing to console<br>
+me, the friendless one,<br>
+wow me with wonders.</p>
 
-\[f'(x, \theta) = \lim_{N \rightarrow \infty} f(x, N\theta) .\]
+<p>He who has known it understands<br>
+how cruel sorrow is as a companion<br>
+for the one who has<br>
+few beloved friends.<br>
+Exile wraps him,<br>
+not rings of gold,<br>
+a frozen spirit,<br>
+not the prosperity of the earth.<br>
+He remembers hall-warriors<br>
+and ring-givers,<br>
+how his gold-giver<br>
+treated him to feasting<br>
+in his youth.<br>
+How all that joy has died!<br>
+And so he knows this,<br>
+he who must for a long time<br>
+forgo the counsel of his<br>
+dear lord,<br>
+when sorrow and sleep together<br>
+wrap him up and bind him.<br>
+He dreams in his head<br>
+that he hugs and kisses<br>
+his lord,<br>
+and on his lord’s knee<br>
+lie his hand and head,<br>
+just as he, at times<br>
+in days gone by,<br>
+enjoyed the gift throne.<br>
+Then he wakes back up<br>
+a lordless man,<br>
+he sees before him<br>
+dusky waves,<br>
+sea birds bathing,<br>
+pruning their feathers,<br>
+frost and snow falling,<br>
+mixed in with hail.<br>
+Then are that much heavier<br>
+the wounds of his heart,<br>
+grieving after his lord.<br>
+His sorrow is renewed<br>
+when his mind happens upon<br>
+the memory of his kinsmen.<br>
+He greets them with joy,<br>
+eagerly looks over<br>
+the gathering of men -<br>
+but they always swim away.<br>
+The journey of sailors<br>
+never brings back many<br>
+known stories.<br>
+Grief is renewed<br>
+for him who must<br>
+always send his<br>
+weary heart<br>
+over the binding of the waves.</p>
 
-<p>We define $ f’(x, \theta) $ over the domain of $(x, \theta)$ for which the limit above exists.</p>
+<p>Therefore I can’t think<br>
+why my heart does not<br>
+darken when I reflect<br>
+on all the lives of men<br>
+throughout this world,<br>
+how they suddenly<br>
+left the hall floor,<br>
+those proud thanes.<br>
+So each day this Middle Earth<br>
+crumbles and decays.<br>
+Therefore a man cannot become<br>
+wise before he has a share<br>
+of winters in the world.<br>
+A wise man must be patient,<br>
+must not be too reckless,<br>
+nor too word-hasty<br>
+nor too weak a warrior,<br>
+nor too rash,<br>
+neither too fearful nor cheerful,<br>
+nor too greedy of goods,<br>
+and never too eager for boasting<br>
+before he truly understands.<br>
+A man must wait<br>
+when he speaks oaths<br>
+until the bold one<br>
+truly knows<br>
+where his heart’s intent<br>
+will turn.<br>
+A wise hero must realize<br>
+how ghastly it will be<br>
+when all the wealth of this world<br>
+lies waste,<br>
+as now in various places<br>
+around this earth,<br>
+walls stand<br>
+blown by wind,<br>
+covered in snow,<br>
+storm-wrecked ruins.<br>
+The halls decay,<br>
+their leader lies dead,<br>
+deprived of joy.<br>
+The whole troop<br>
+has proudly fallen by the wall.<br>
+Some war took them,<br>
+carried them on their way.<br>
+One, a bird snatched off<br>
+over the deep sea.<br>
+Another, the grey wolf<br>
+tore apart after his death.<br>
+Another, buried<br>
+dreary-faced<br>
+in his grave.<br>
+And so He destroyed this place,<br>
+the Creator of men,<br>
+until missing the noise<br>
+of its residents,<br>
+the old work of giants<br>
+stood idle.</p>
 
-<p>In a neural network, the effect of this transformation is to discretize all of the activations. For example, consider a neuron:</p>
+<p>He who wisely reflected<br>
+on this ruin,<br>
+and deeply pondered<br>
+this dark life,<br>
+wise in experience,<br>
+distantly remembered<br>
+much slaying,<br>
+and spoke these words:</p>
 
-\[\sigma(wx + b)\]
+<p>Where is the horse? Where is the rider?<br>
+Where is the treasure-giver?<br>
+Where are the hall’s joys?<br>
+Alas, the bright cups!<br>
+Alas, the warrior in mail!<br>
+How that time has departed,<br>
+dark under night’s helm,<br>
+as if it never were.<br>
+Now stands as a trace of<br>
+the dear warband<br>
+a wonderously high wall,<br>
+snakingly woven.<br>
+The warriors have been snatched away<br>
+by the honor of spears,<br>
+slaughter-seeking weapons,<br>
+that famous fate,<br>
+and storms clash against<br>
+these stone cliffs,<br>
+falling frost<br>
+grips the earth,<br>
+the clamor of winter.<br>
+Then darkness comes;<br>
+night’s shadow deepens.<br>
+From the north approaches<br>
+a rough hail storm,<br>
+hostile to men.<br>
+All is troubled<br>
+in this earthly kingdom,<br>
+the tide of fate<br>
+turns the world under the heavens.<br>
+Here is wealth fleeting.<br>
+Here are companions fleeting.<br>
+Here is man himself fleeting.<br>
+Here is kinsman fleeting.<br>
+Every foundation of this world<br>
+becomes void and vain.</p>
 
-<p>where $\sigma$ is the sigmoid function. When we take the limit of $\sigma(Nwx + Nb)$, the output of the neuron approaches either $0$ or $1$. This is what I mean by <em>discretization</em>.</p>
-
-<p>After applying this discretization to the full network, we can analyze the computational capacity of the resulting discrete automaton. We also define a notion of space complexity associated with these saturated networks in the paper. Intuitively, this measure of complexity is just the number of configurations that the saturated network can have after reading a sequence of length $n$. For more details on this, consult <a href="https://arxiv.org/abs/1906.01615" rel="external nofollow noopener" target="_blank">the paper</a>.</p>
-
-<h2 id="summary-of-results">Summary of Results</h2>
-
-<p>By $L(M)$, we denote the set of formal languages that a machine $M$ can accept. Some key capacity results from the paper are as follows:</p>
-
-<ul>
-  <li>$L(\textrm{ConvNet})$ is a proper subset of the regular languages</li>
-  <li>$L(\textrm{RNN})$ is exactly the regular languages</li>
-  <li>$L(\textrm{GRU})$ is exactly the regular languages</li>
-  <li>$L(\textrm{LSTM})$ is a superset of the regular languages, and a subset of the real-time counter languages</li>
-</ul>
-
-<p>The core results about the configuration complexity, some of which are analogous, are:</p>
-
-<ul>
-  <li>ConvNet has $O(1)$ configurations</li>
-  <li>RNN has $O(1)$ configurations</li>
-  <li>GRU has $O(1)$ configurations</li>
-  <li>LSTM has $O(n^k)$ configurations for hidden size $k$</li>
-  <li>Attention has $2^{O(n)}$ configurations</li>
-  <li>
-<a href="https://github.com/viking-sudo-rm/stacknn-core" rel="external nofollow noopener" target="_blank">StackNN</a> has $2^{O(n)}$ configurations</li>
-</ul>
-
-<p>There are some other results about attention/transformers that I’m not going to get into here, since they’re not so neat. If you’re interested though, I refer you to Section 4 of <a href="https://arxiv.org/abs/1906.01615" rel="external nofollow noopener" target="_blank">the paper</a>.</p>
-
-<h2 id="empirical-evidence">Empirical Evidence</h2>
-
-<h3 id="positive-evidence">Positive Evidence</h3>
-
-<p>The development of this theory was motivated by past empirical results about what RNNs are able to learn. Two types of tasks (counting and reversing) serve as relevant diagnostics for assessing the computational power of different architectures.</p>
-
-<p><a href="https://arxiv.org/abs/1805.04908" rel="external nofollow noopener" target="_blank">Weiss et al.</a> show that LSTMs can learn to count, whereas RNNs and GRUs do not. Similarly, <a href="https://arxiv.org/abs/1906.03648" rel="external nofollow noopener" target="_blank">Sugzgun et al.</a> observe that LSTMs can learn the 1-Dyck counter language, whereas other RNNs do not. This is predicted by the theory since saturated LSTMs can do counting, but saturated RNNs and GRUs are finite state.</p>
-
-<p><a href="https://arxiv.org/abs/1809.02836" rel="external nofollow noopener" target="_blank">Hao et al.</a> show how stack neural networks can solve the (beyond counter language) task of reversing a string, whereas LSTMs fail badly on this. In my paper, I also showed that attention can solve this task. Both of the results are predicted by the theory, since stack neural networks and attention allow for exponential configurations, which are needed to reverse a string, whereas LSTMs are limited to polynomial configurations.</p>
-
-<h3 id="negative-evidence">Negative Evidence</h3>
-
-<p>While I found that regularized neural networks display the counting pattern reported by <a href="https://arxiv.org/abs/1805.04908" rel="external nofollow noopener" target="_blank">Weiss et al.</a>, I also found that the unregularized LSTM, GRU, and RNN can all learn to model the language $a^nb^nc$, which requires counting. Thus, it might be more precise to say that the saturated theory seems to describe the learnable capacity of <em>regularized</em> networks. One possible interpretation of this is that the constraints imposed by regularization prevent the network from learning strategies beyond the saturated capacity.</p>
-
-<h2 id="proof-sketches">Proof Sketches</h2>
-
-<h3 id="rnn-capacity-and-complexity">RNN Capacity and Complexity</h3>
-
-<p>To show that $L(\textrm{RNN})$ is the regular languages, we show two directions of containment.</p>
-
-<p>First, we prove that the the regular languages are an upper bound. We do this by showing that the configuration complexity of the RNN is finite, i.e. $O(1)$. Since each neuron has two possible values ($-1$ and $1$), and there are $k$ neurons in the state, the number of configurations of the state vector is $O(2^k) = O(1)$.</p>
-
-<p>The other direction is a little more complicated. We need to construct an RNN to simulate an arbitrary finite state machine. A construction for this is provided in Lemma B.1.</p>
-
-<h3 id="lstm-capacity-and-complexity">LSTM Capacity and Complexity</h3>
-
-<p>In the LSTM case, even when we discretize the network, we get a model with more than finite state. This is because the LSTM’s gating architecture is capable of counting (<a href="https://arxiv.org/abs/1805.04908" rel="external nofollow noopener" target="_blank">Weiss et al.</a>, 2018).</p>
-
-<p>To show that the counter languages are an upper bound, we write the saturated gate network for a particular counter state neuron $c$ as follows:</p>
-
-<!-- For some reason, the normal \lim_ is not working here. Neither does f_tc_{t-1}. I guess -->
-
-\[\underset{N \rightarrow \infty}{\lim} c_t\]
-
-\[= \underset{N \rightarrow \infty}{\lim} fc_{t-1} + i{\tilde c}_t\]
-
-\[= \underset{N \rightarrow \infty}{\lim} ac_{t-1} + b\]
-
-<p>where $a$ is $0$ or $1$ and $b$ is $-1$, $0$, or $1$. This equation parameterizes a real-time counter machine update. Thus, the counter languages are an upper bound on the saturated LSTM capacity.</p>
+<p>So spoke the wise one in his mind.<br>
+He sat apart in thought.<br>
+Good is he who holds onto his faith,<br>
+and a warrior must never speak<br>
+the grievances of his heart too quickly,<br>
+unless he already knows the cure.<br>
+A hero must act with conviction.<br>
+Good is he who seeks mercy,<br>
+the Father’s grace in Heaven,<br>
+where permanence stands for us all.</p>
 
       </d-article>
 

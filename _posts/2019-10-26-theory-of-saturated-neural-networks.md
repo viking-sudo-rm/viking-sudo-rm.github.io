@@ -1,7 +1,7 @@
 ---
 layout: distill
 title: Theory of Saturated Neural Networks
-description: Summarizing <i>Sequential Neural Networks as Automata</i>.
+description: Summarizing <i>Sequential Neural Networks as Automata</i>
 tags:
 date: 2019-09-06
 featured: false
