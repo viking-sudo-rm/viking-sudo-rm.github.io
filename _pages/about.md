@@ -20,7 +20,9 @@ social: false  # includes social icons at the bottom of the page
 
 <p>My research develops theory to better understand what <b>language models</b> can do, as well as what they can't. I've worked on characterizing the <b>computational power of transformers</b> for representing linguistic structure and solving reasoning problems. I've also analyzed the aspects of <b>semantics that can be learned from co-occurrence patterns</b> as a way to understand the potential of self-supervised learning.</p>
 
-<p><b>New:</b> Give me <a href="https://www.admonymous.co/lambdaviking">anonymous feedback</a>!</p>
+<p>
+<b>Contact:</b> <code>willm[æt]nyu.edu</code> or <a href="https://www.admonymous.co/lambdaviking">here</a> for anonymous feedback
+</p>
 
 <p>Outside of research, I like exploring New York City by foot, train, and boat. I like cooking new things and trying hole-in-the-wall restaurants. I also play basketball, ping pong, and Age of Empires II.</p>
 
