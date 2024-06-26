@@ -11,6 +11,7 @@ description: > # the ">" symbol means to ignore newlines until "footer_text:"
   This is the personal website of William Merrill
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme and inspired by <a href="https://gbrlfaria.github.io/">Gabriel Faria's website</a>.
+  <br />Photo by Brian Kitano.
 keywords: artificial-intelligence, theory-of-computation, deep-learning, language-models  # add your own keywords or leave empty
 
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)

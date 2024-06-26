@@ -6,7 +6,7 @@ subtitle:
 
 profile:
   align: left
-  image: headshot.jpg
+  image: whiteboard-headshot.jpeg
   image_circular: true # crops the image to make it circular
   address: >
 
