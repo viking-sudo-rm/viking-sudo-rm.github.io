@@ -24,6 +24,8 @@ social: false  # includes social icons at the bottom of the page
 <b>Contact:</b> <code>willm[æt]nyu.edu</code> or <a href="https://www.admonymous.co/lambdaviking">here</a> for anonymous feedback
 </p>
 
+<p>I'm on the <b>academic job market</b>! Feel free to reach out if you have a relevant faculty or postdoc opening.</p>
+
 <p>Outside of research, I like exploring New York City by foot, train, and boat. I like cooking new things and trying hole-in-the-wall restaurants. I also play basketball, ping pong, and Age of Empires II.</p>
 
 <br /> <br />

@@ -50,8 +50,7 @@ GEM
     ffi (1.16.3)
     forwardable-extended (2.6.0)
     gemoji (4.1.0)
-    google-protobuf (3.24.4-x86_64-darwin)
-    google-protobuf (3.24.4-x86_64-linux)
+    google-protobuf (3.24.4)
     html-pipeline (2.14.3)
       activesupport (>= 2)
       nokogiri (>= 1.4)
@@ -140,15 +139,15 @@ GEM
     matrix (0.4.2)
     mercenary (0.4.0)
     mini_mime (1.1.5)
+    mini_portile2 (2.8.7)
     mini_racer (0.8.0)
       libv8-node (~> 18.16.0.0)
     minitest (5.20.0)
     multi_xml (0.6.0)
     mutex_m (0.1.2)
     namae (1.1.1)
-    nokogiri (1.15.4-x86_64-darwin)
-      racc (~> 1.4)
-    nokogiri (1.15.4-x86_64-linux)
+    nokogiri (1.15.4)
+      mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
@@ -178,6 +177,7 @@ GEM
 
 PLATFORMS
   x86_64-darwin-21
+  x86_64-darwin-23
   x86_64-linux
 
 DEPENDENCIES
