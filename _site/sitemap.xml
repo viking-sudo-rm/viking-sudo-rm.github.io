@@ -25,6 +25,10 @@
 <lastmod>2022-04-15T00:00:00-07:00</lastmod>
 </url>
 <url>
+<loc>http://localhost:4000/blog/2025/dissertation/</loc>
+<lastmod>2025-10-01T00:00:00-07:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/</loc>
 </url>
 <url>
@@ -44,5 +48,8 @@
 </url>
 <url>
 <loc>http://localhost:4000/blog/2022/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/blog/2025/</loc>
 </url>
 </urlset>

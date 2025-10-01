@@ -23,9 +23,9 @@ social: false  # includes social icons at the bottom of the page
 <p>My research uses formal methods to better understand the capabilities and limitations of <b>language models</b>. I've worked on characterizing the <b>computational power of transformers</b> for representing linguistic structure and solving reasoning problems. I've also worked on understanding the aspects of <b>semantics that can be learned from co-occurrence patterns</b> in a large text corpus. Overall, I am interested in building out theoretical foundations for the alchemy of large language models. Why have LMs been successful? What are their limitations? How can we more systematically build and deploy them?</p> -->
 
 <div style="border: 1px solid gray; padding: 10px; margin-bottom: 15px;">
-  <p><b>Contact:</b> <code>willm[æt]{nyu,allenai,ttic}.edu</code> or <a href="https://www.admonymous.co/lambdaviking">here</a> for anonymous feedback</p>
+  <p><b>Contact:</b> <code>willm[æt]{nyu.edu,allenai.org,ttic.edu}</code> or <a href="https://www.admonymous.co/lambdaviking">here</a> for anonymous feedback</p>
 
-  <p><b>Potential PhD students:</b> I will be recruiting PhD students to start in 2026. If you would like to work with me, please apply to TTIC and mention my name in your application!</p>
+  <p><b>Potential PhD students:</b> I will be recruiting PhD students to start in 2026. If you would like to work with me, please apply to TTIC and mention my name in your application! See <a href="https://docs.google.com/document/d/1jbzwT0sGtLX_j_9T079S59CE4AHnImqiNoOA9XSVEOE/">my application FAQs</a></p>
 </div>
 
 <!-- <p>Outside of research, I like exploring New York City by foot, train, and boat. I like cooking new things and trying hole-in-the-wall restaurants. I also play basketball, ping pong, and Age of Empires II.</p> -->
