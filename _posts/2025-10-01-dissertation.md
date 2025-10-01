@@ -26,4 +26,5 @@ bibliography:
 
 ---
 
-My dissertation, <i>A theory of the computational power and limitations of language modeling architectures<i>, is now available [here](../../assets/pdf/dissertation.pdf)!
+<!-- , <i>A theory of the computational power and limitations of language modeling architectures</i>, -->
+My dissertation is now available [here](/assets/pdf/dissertation.pdf)!
